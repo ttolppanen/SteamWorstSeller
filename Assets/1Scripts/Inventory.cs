@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
-    public GameObject[] inventory = new GameObject[10];
+    public GameObject[,] inventory = new GameObject[10, 10];
     public Transform inventorynPaikka;
     public Transform tiputusPaikka;
 
@@ -14,12 +14,15 @@ public class Inventory : MonoBehaviour {
 	
 	void Update () {
         if (Input.GetMouseButtonDown(0)) {
-            for (int i = 0; i < inventory.Length; i++)
+            for (int ix = 0; ix < inventory.GetLength(0); ix++)
             {
-                if (inventory[i] != null)
+                for (int iy = 0; iy < inventory.GetLength(1); iy++)
                 {
-                    TiputaInventorysta(i);
-                    return;
+                    if (inventory[ix, iy] != null)
+                    {
+                        TiputaInventorysta(ix, iy);
+                        return;
+                    }
                 }
             }
         }
@@ -29,7 +32,6 @@ public class Inventory : MonoBehaviour {
     {
         if (other.tag == "Esine" && Input.GetKey("f"))
         {
-            Debug.Log("NOH");
             LaitaEsineTyhjaanPaikkaan(other.gameObject);
         }
     }
@@ -37,24 +39,27 @@ public class Inventory : MonoBehaviour {
 
 
     void LaitaEsineTyhjaanPaikkaan(GameObject esine) {
-        for (int i = 0; i < inventory.Length; i++)
+        for (int ix = 0; ix < inventory.GetLength(0); ix++)
         {
-            if (inventory[i] == null)
+            for (int iy = 0; iy < inventory.GetLength(1); iy++)
             {
-                inventory[i] = esine;
-                inventory[i].transform.parent = inventorynPaikka;
-                inventory[i].transform.position = inventorynPaikka.position;
-                inventory[i].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                return;
+                if (inventory[ix, iy] == null)
+                {
+                    inventory[ix, iy] = esine;
+                    inventory[ix, iy].transform.parent = inventorynPaikka;
+                    inventory[ix, iy].transform.position = inventorynPaikka.position;
+                    inventory[ix, iy].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                    return;
+                }
             }
         }
     }
 
-    void TiputaInventorysta(int indeksi)
+    void TiputaInventorysta(int indeksi1, int indeksi2)
     {
-        inventory[indeksi].transform.parent = null;
-        inventory[indeksi].transform.position = tiputusPaikka.position;
-        inventory[indeksi].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        inventory[indeksi] = null;
+        inventory[indeksi1, indeksi2].transform.parent = null;
+        inventory[indeksi1, indeksi2].transform.position = tiputusPaikka.position;
+        inventory[indeksi1, indeksi2].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        inventory[indeksi1, indeksi2] = null;
     }
 }
