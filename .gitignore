@@ -25,3 +25,7 @@ sysinfo.txt
 \.vs/SteamWorstSeller/DesignTimeBuild/\.dtbcache
 
 *.ide-wal
+
+\.vs/SteamWorstSeller/DesignTimeBuild/
+
+\.vs/SteamWorstSeller/v15/Server/sqlite3/
