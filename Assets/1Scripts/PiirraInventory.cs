@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class PiirraInventory : MonoBehaviour {
 
     GameObject[,] inventory; 
-    public GameObject pelaajanInventoryPeliObjectina;
     Inventory ivScripti; //Inventorio scripti
     public Vector2Int koordinaatit; // 0, 0 on vasen yläreuna
     Sprite kuva;
 
     private void Start()
     {
-        ivScripti = pelaajanInventoryPeliObjectina.GetComponent<Inventory>();
+        ivScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
     }
 
     void Update () {

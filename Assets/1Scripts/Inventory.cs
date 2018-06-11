@@ -13,10 +13,10 @@ public class Inventory : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (Input.GetMouseButtonDown(0)) {
-            for (int ix = 0; ix < inventory.GetLength(0); ix++)
+        if (Input.GetMouseButtonDown(1)) {
+            for (int iy = 0; iy < inventory.GetLength(0); iy++)
             {
-                for (int iy = 0; iy < inventory.GetLength(1); iy++)
+                for (int ix = 0; ix < inventory.GetLength(1); ix++)
                 {
                     if (inventory[ix, iy] != null)
                     {
@@ -39,9 +39,9 @@ public class Inventory : MonoBehaviour {
 
 
     void LaitaEsineTyhjaanPaikkaan(GameObject esine) {
-        for (int ix = 0; ix < inventory.GetLength(0); ix++)
+        for (int iy = 0; iy < inventory.GetLength(0); iy++)
         {
-            for (int iy = 0; iy < inventory.GetLength(1); iy++)
+            for (int ix = 0; ix < inventory.GetLength(1); ix++)
             {
                 if (inventory[ix, iy] == null)
                 {

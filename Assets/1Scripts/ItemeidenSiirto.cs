@@ -1,0 +1,66 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class ItemeidenSiirto : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
+{
+
+    Vector3 aloitusPaikka;
+
+    GraphicRaycaster raycaster;
+    PointerEventData pointer;
+    EventSystem eventSystem;
+    GameObject[,] pelaajanInventory;
+
+    void Awake()
+    {
+        raycaster = GameObject.Find("Canvas").GetComponent<GraphicRaycaster>();
+        eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        pelaajanInventory = GameObject.Find("PelaajanInventory").GetComponent<Inventory>().inventory;
+    }
+
+
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        aloitusPaikka = transform.position;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = Input.mousePosition;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        transform.position = aloitusPaikka;
+        pointer = new PointerEventData(eventSystem);
+        pointer.position = Input.mousePosition;
+        List<RaycastResult> results = new List<RaycastResult>();
+        raycaster.Raycast(eventData, results);
+        GameObject toinenPalikka = loydaEsine(results);
+        if (toinenPalikka != null)
+        {
+            Vector2Int mK = GetComponent<PiirraInventory>().koordinaatit; //Meidän palikan koordinaatit
+            Vector2Int tK = toinenPalikka.GetComponent<PiirraInventory>().koordinaatit; //Toisen palikan koordinaatit
+            //Vaihdetaan paikat pelaajan inventoryssä...
+            GameObject toinenPeliObjekti = pelaajanInventory[tK.x, tK.y];
+            pelaajanInventory[tK.x, tK.y] = pelaajanInventory[mK.x, mK.y];
+            pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
+        }
+    }
+
+    GameObject loydaEsine(List<RaycastResult> lista)
+    {
+        foreach (RaycastResult i in lista) {
+            if (i.gameObject.tag == "InventoryPalikka")
+            {
+                return i.gameObject;
+            }
+        }
+        return null;
+    }
+
+}
