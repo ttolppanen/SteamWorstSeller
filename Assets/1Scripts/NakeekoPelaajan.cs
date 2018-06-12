@@ -7,12 +7,10 @@ public class NakeekoPelaajan : MonoBehaviour {
     public bool nahdaankoPelaaja;
     public float nakoAlue; //Asteina +-
     public float nakoMatka;
-    public float sektorinSiirto;
     GameObject pelaaja;
 
     void Start() {
         pelaaja = GameObject.FindGameObjectWithTag("Player");
-        sektorinSiirto *= Mathf.Deg2Rad;
         nakoAlue *= Mathf.Deg2Rad;
     }
 
