@@ -13,19 +13,19 @@ public class Inventory : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (Input.GetMouseButtonDown(1)) {
+        /*if (Input.GetMouseButtonDown(1)) {
             for (int iy = 0; iy < inventory.GetLength(0); iy++)
             {
                 for (int ix = 0; ix < inventory.GetLength(1); ix++)
                 {
                     if (inventory[ix, iy] != null)
                     {
-                        TiputaInventorysta(ix, iy);
+                        TiputaInventorysta(new Vector2Int(ix, iy));
                         return;
                     }
                 }
             }
-        }
+        }*/
 	}
 
     private void OnTriggerStay(Collider other)
@@ -55,11 +55,11 @@ public class Inventory : MonoBehaviour {
         }
     }
 
-    void TiputaInventorysta(int indeksi1, int indeksi2)
+    public void TiputaInventorysta(Vector2Int koordinaatit)
     {
-        inventory[indeksi1, indeksi2].transform.parent = null;
-        inventory[indeksi1, indeksi2].transform.position = tiputusPaikka.position;
-        inventory[indeksi1, indeksi2].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        inventory[indeksi1, indeksi2] = null;
+        inventory[koordinaatit.x, koordinaatit.y].transform.parent = null;
+        inventory[koordinaatit.x, koordinaatit.y].transform.position = tiputusPaikka.position;
+        inventory[koordinaatit.x, koordinaatit.y].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        inventory[koordinaatit.x, koordinaatit.y] = null;
     }
 }

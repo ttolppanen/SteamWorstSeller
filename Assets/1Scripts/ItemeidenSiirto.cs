@@ -13,15 +13,17 @@ public class ItemeidenSiirto : MonoBehaviour, IDragHandler, IEndDragHandler, IBe
     PointerEventData pointer;
     EventSystem eventSystem;
     GameObject[,] pelaajanInventory;
+    RectTransform invBlockit;
+    Inventory invScripti;
 
     void Awake()
     {
         raycaster = GameObject.Find("Canvas").GetComponent<GraphicRaycaster>();
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-        pelaajanInventory = GameObject.Find("PelaajanInventory").GetComponent<Inventory>().inventory;
+        invScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
+        pelaajanInventory = invScripti.inventory;
+        invBlockit = (RectTransform)GameObject.Find("InventoryBlockit").transform;
     }
-
-
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -41,14 +43,29 @@ public class ItemeidenSiirto : MonoBehaviour, IDragHandler, IEndDragHandler, IBe
         List<RaycastResult> results = new List<RaycastResult>();
         raycaster.Raycast(eventData, results);
         GameObject toinenPalikka = loydaEsine(results);
+
+        Vector2Int mK = GetComponent<PiirraInventory>().koordinaatit; //Meidän palikan koordinaatit
+
+        bool ollaankoInvAlueella = invBlockit.rect.Contains(Input.mousePosition);
+
+        if (!ollaankoInvAlueella)
+        {
+            invScripti.TiputaInventorysta(mK);
+            return;
+        }
+
+        Vector2Int tK = toinenPalikka.GetComponent<PiirraInventory>().koordinaatit; //Toisen palikan koordinaatit
         if (toinenPalikka != null)
         {
-            Vector2Int mK = GetComponent<PiirraInventory>().koordinaatit; //Meidän palikan koordinaatit
-            Vector2Int tK = toinenPalikka.GetComponent<PiirraInventory>().koordinaatit; //Toisen palikan koordinaatit
             //Vaihdetaan paikat pelaajan inventoryssä...
             GameObject toinenPeliObjekti = pelaajanInventory[tK.x, tK.y];
             pelaajanInventory[tK.x, tK.y] = pelaajanInventory[mK.x, mK.y];
             pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
+        }
+        else
+        {
+            pelaajanInventory[tK.x, tK.y] = pelaajanInventory[mK.x, mK.y];
+            pelaajanInventory[mK.x, mK.y] = null;
         }
     }
 
