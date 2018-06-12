@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 54613206129255208}
   - component: {fileID: 136003994892365288}
   - component: {fileID: 114963910920275920}
+  - component: {fileID: 114234648674213826}
   m_Layer: 0
   m_Name: Vihollinen
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1232540308437378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.555449, y: 6.44, z: 43.68}
+  m_LocalPosition: {x: 100, y: 2.82, z: -8.192585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4635155704485768}
@@ -66,7 +67,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270939757341962}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -88,6 +89,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &114234648674213826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1232540308437378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497c7ed174fdb394d9cae272d70b214e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nahdaankoPelaaja: 0
+  nakoAlue: 45
+  nakoMatka: 50
+  sektorinSiirto: 0
 --- !u!114 &114963910920275920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,14 +115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3031afd67433f284db9e213668115a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liikkumisNopeus: 7
+  liikkumisNopeus: 0
 --- !u!114 &114981547353857592
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270939757341962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6e569debccaf0d428454f3f19dbd666, type: 3}
   m_Name: 

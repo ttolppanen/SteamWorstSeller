@@ -50,22 +50,45 @@ public class NakeekoPelaajan : MonoBehaviour {
         return false;
     }
 
+    bool NormaaliNakoKentta(float kulma, float rot)
+    {
+        if (kulma > rot - nakoAlue && kulma < rot + nakoAlue)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     bool OnkoNakoKentassa()
     {
         Vector3 suuntaPelaajaan = pelaaja.transform.position - transform.position;
-        float kulma = Mathf.Atan2(suuntaPelaajaan.x, suuntaPelaajaan.z) + Mathf.PI;
-        float rot = (transform.rotation.eulerAngles.y) * Mathf.Deg2Rad;
-        Vector3 suuntaRotPlus = new Vector3(Mathf.Sin(rot + nakoAlue), 0, Mathf.Cos(rot + nakoAlue));
-        Vector3 suuntaRotMiinus = new Vector3(Mathf.Sin(rot - nakoAlue), 0, Mathf.Cos(rot - nakoAlue));
-        Debug.DrawRay(transform.position, suuntaPelaajaan);
-        Debug.DrawRay(transform.position, suuntaRotPlus);
-        Debug.DrawRay(transform.position, suuntaRotMiinus);
-        Debug.Log("Kulma " + kulma * Mathf.Deg2Rad);
-        Debug.Log("Rot " + rot * Mathf.Deg2Rad);
-
-        //Debug.Log("Rot - nakoAlue: " + (rot + nakoAlue) * Mathf.Rad2Deg);
-        //Debug.Log("Rot + nakoAlue: " + (rot - nakoAlue) * Mathf.Rad2Deg);
-        return true;
+        float kulma = Mathf.Atan2(suuntaPelaajaan.x, suuntaPelaajaan.z);
+        float rot = (transform.rotation.eulerAngles.y);
+        if (rot > 180)
+        {
+            rot -= 360;
+        }
+        rot *= Mathf.Deg2Rad;
+        if (rot + nakoAlue > Mathf.PI)
+        {
+            if (kulma < 0)
+            {
+                kulma += 2 * Mathf.PI;
+            }
+            return NormaaliNakoKentta(kulma, rot);
+        }
+        else if (rot - nakoAlue < -Mathf.PI)
+        {
+            if (kulma >= 0)
+            {
+                kulma -= 2 * Mathf.PI;
+            }
+            return NormaaliNakoKentta(kulma, rot);
+        }
+        return NormaaliNakoKentta(kulma, rot);
     }
 
     RaycastHit[] JarjestaPituudenMukaan(RaycastHit[] osumat)//JOS ON TÄMÄ LAGAA NIIN LOYTYY HELPPO RATKAISUööööööööö
