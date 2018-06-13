@@ -33,7 +33,7 @@ public class NakeekoPelaajan : MonoBehaviour {
         osumat = JarjestaPituudenMukaan(osumat);
         foreach (RaycastHit osuma in osumat)
         {
-            if (osuma.transform != transform)
+            if (osuma.transform != transform || osuma.transform.tag != "Enemy")
             {
                 if (osuma.transform != pelaaja.transform)
                 {
@@ -62,7 +62,19 @@ public class NakeekoPelaajan : MonoBehaviour {
 
     bool OnkoNakoKentassa()
     {
-        Vector3 suuntaPelaajaan = pelaaja.transform.position - transform.position;
+        Vector3 suuntaPelaajaan = (pelaaja.transform.position - transform.position).normalized;
+        float pelaajanJaVihollisenValinenKulma = Mathf.Acos(Vector3.Dot(suuntaPelaajaan, transform.forward));
+       
+        if (pelaajanJaVihollisenValinenKulma > -nakoAlue && pelaajanJaVihollisenValinenKulma < nakoAlue || float.IsNaN(pelaajanJaVihollisenValinenKulma))
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+
+        //VANHA
         float kulma = Mathf.Atan2(suuntaPelaajaan.x, suuntaPelaajaan.z);
         float rot = (transform.rotation.eulerAngles.y);
         if (rot > 180)

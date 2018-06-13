@@ -4,26 +4,38 @@ using UnityEngine;
 
 public class vihollistenLiikuminen : MonoBehaviour {
 
-    public float liikkumisNopeus;
+    public float kiihtyvyys;
+    public float maxNopeus;
     GameObject pelaaja;
     Rigidbody rb;
     NakeekoPelaajan nkScripti;
+    VihollisenSeuraus vhScripti;
+    Vector3 seurausSuunta;
 
 	void Start () {
         rb = GetComponent<Rigidbody>();
         pelaaja = GameObject.FindGameObjectWithTag("Player");
         nkScripti = GetComponent<NakeekoPelaajan>();
+        vhScripti = GetComponent<VihollisenSeuraus>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
         bool nahdaankoPelaaja = nkScripti.nahdaankoPelaaja;
+        bool pitaakoSeurata = vhScripti.pitaakoSeurata;
         if (nahdaankoPelaaja)
         {
-            Vector3 suuntaPelaajaan = pelaaja.transform.position - transform.position;
-            suuntaPelaajaan.y = 0;
+            seurausSuunta = (pelaaja.transform.position - transform.position).normalized;
+            seurausSuunta.y = 0;
+        }
+        if (pitaakoSeurata)
+        {
             transform.LookAt(pelaaja.transform);
-            rb.AddForce(suuntaPelaajaan.normalized * liikkumisNopeus);
+            rb.AddForce(seurausSuunta.normalized * kiihtyvyys);
+        }
+        if (rb.velocity.magnitude > maxNopeus)
+        {
+            rb.velocity = rb.velocity.normalized * maxNopeus;
         }
 	}
 }
