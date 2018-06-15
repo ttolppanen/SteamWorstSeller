@@ -74,7 +74,7 @@ public class NakeekoPelaajan : MonoBehaviour {
         }
 
 
-        //VANHA
+        /*VANHA
         float kulma = Mathf.Atan2(suuntaPelaajaan.x, suuntaPelaajaan.z);
         float rot = (transform.rotation.eulerAngles.y);
         if (rot > 180)
@@ -98,10 +98,10 @@ public class NakeekoPelaajan : MonoBehaviour {
             }
             return NormaaliNakoKentta(kulma, rot);
         }
-        return NormaaliNakoKentta(kulma, rot);
+        return NormaaliNakoKentta(kulma, rot);*/
     }
 
-    RaycastHit[] JarjestaPituudenMukaan(RaycastHit[] osumat)//JOS ON TÄMÄ LAGAA NIIN LOYTYY HELPPO RATKAISUööööööööö
+    RaycastHit[] JarjestaPituudenMukaan(RaycastHit[] osumat)//JOS ON TÄMÄ LAGAA NIIN LOYTYY HELPPO RATKAISUööööööööö TAI EI MUTTA VOIS MIETTIÄ TARVIIKO OIKEASTI LISTAA SIITÄ VAI MITÄ???????
     {
         List<RaycastHit> jarjestettuLista = new List<RaycastHit>();
         foreach (RaycastHit osuma in osumat)

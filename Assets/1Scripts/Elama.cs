@@ -6,7 +6,7 @@ public class Elama : MonoBehaviour {
 
     public float maxHP;
     public bool onkoKuollut;
-    float hp;
+    public float hp;
 
     private void Start()
     {

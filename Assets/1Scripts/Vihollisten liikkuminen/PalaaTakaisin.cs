@@ -15,7 +15,6 @@ public class PalaaTakaisin : MonoBehaviour {
 
     void Start () {
         viimeisetPisteet.Add(transform.position);
-        print(viimeisetPisteet[0].w);
         vhScripti = GetComponent<VihollisenSeuraus>();
         rb = GetComponent<Rigidbody>();
         kiihtyvyys = GetComponent<vihollistenLiikuminen>().kiihtyvyys;
