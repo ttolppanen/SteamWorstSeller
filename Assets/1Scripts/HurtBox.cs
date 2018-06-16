@@ -9,7 +9,7 @@ public class HurtBox : MonoBehaviour {
 
     private void Start()
     {
-        kasi = GameObject.Find("OikeaKäsi");
+        kasi = GameObject.Find("AseenPaikka");
     }
 
     private void Update()

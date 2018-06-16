@@ -9,7 +9,7 @@ public class LyoVihollista : MonoBehaviour {
 
     private void Start()
     {
-        aseObjecti = GameObject.Find("OikeaKäsi").transform.GetChild(0).gameObject;
+        aseObjecti = GameObject.Find("AseenPaikka").transform.GetChild(0).gameObject;
     }
 
     void Update () {
