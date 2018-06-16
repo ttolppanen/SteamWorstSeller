@@ -29,7 +29,7 @@ public class PiirraInventory : MonoBehaviour {
     {
         if (inventory[koordinaatit.x, koordinaatit.y] != null)
         {
-            kuva = inventory[koordinaatit.x, koordinaatit.y].GetComponent<EsineenOminaisuuksia>().esineenKuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
+            kuva = inventory[koordinaatit.x, koordinaatit.y].GetComponent<EsineenOminaisuuksia>().esine.kuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
             GetComponent<Image>().sprite = kuva;
         }
         else

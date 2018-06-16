@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class EsineenOminaisuuksia : MonoBehaviour {
 
-    public Sprite esineenKuva;
+    public Esine esine;
 
 }

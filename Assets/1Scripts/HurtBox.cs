@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class HurtBox : MonoBehaviour {
 
-    public float vahinko;
+    float vahinko;
+    GameObject kasi; //Käsi
+
+    private void Start()
+    {
+        kasi = GameObject.Find("OikeaKäsi");
+    }
+
+    private void Update()
+    {
+        vahinko = ((Ase)kasi.transform.GetChild(0).GetComponent<EsineenOminaisuuksia>().esine).vahinko;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
