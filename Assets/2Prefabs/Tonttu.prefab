@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114544565206053900}
   - component: {fileID: 114269383320449154}
   - component: {fileID: 114691816175204986}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Tonttu
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -46,8 +46,9 @@ GameObject:
   - component: {fileID: 4780164663575116}
   - component: {fileID: 212884084281471852}
   - component: {fileID: 114414227679669222}
-  m_Layer: 9
-  m_Name: gobliniKuva
+  - component: {fileID: 114969486454362218}
+  m_Layer: 0
+  m_Name: TontunKuva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +65,7 @@ GameObject:
   - component: {fileID: 223651151118671266}
   - component: {fileID: 114097354535548498}
   - component: {fileID: 114575935602916426}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +98,7 @@ GameObject:
   - component: {fileID: 222929768077225070}
   - component: {fileID: 114821460171129174}
   - component: {fileID: 114674040638554474}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +140,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1090046958367506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.473002, y: 1.738, z: 37.854553}
+  m_LocalPosition: {x: -64.34, y: 1.738, z: 37.854553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4780164663575116}
@@ -211,8 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3031afd67433f284db9e213668115a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kiihtyvyys: 25
-  maxNopeus: 6
+  kiihtyvyys: 16
+  maxNopeus: 8
 --- !u!114 &114232247407499362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d353b9f977674ca47869d8d926093890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seuraamisenLopetusAika: 2
+  seuraamisenLopetusAika: 4
   pitaakoSeurata: 0
 --- !u!114 &114414227679669222
 MonoBehaviour:
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ollaankoLyontiEtaisyydella: 0
-  lyontiEtaisyys: 5
+  lyontiEtaisyys: 7
 --- !u!114 &114803401299630592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,6 +356,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114969486454362218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154112515116632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7952399e41baddd499a2d15f0542753d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kuvat:
+  - {fileID: 21300000, guid: d53af805e2a75b94d909f126292823fc, type: 3}
+  - {fileID: 21300000, guid: f957edbd6325be14a9bd83bc79ad975d, type: 3}
+  - {fileID: 21300000, guid: 79e2a845a7612514d84095c7ef5d3057, type: 3}
+  - {fileID: 21300000, guid: 512ac424d15328b47a8b03638d2a8e39, type: 3}
 --- !u!136 &136926279890072248
 CapsuleCollider:
   m_ObjectHideFlags: 1
