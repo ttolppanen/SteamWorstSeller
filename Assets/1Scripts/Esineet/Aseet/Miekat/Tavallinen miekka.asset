@@ -8,9 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: EiTOIMI
-  m_EditorClassIdentifier: Assembly-CSharp::Miekka
-  nimi: ISO MIEKKA
-  kuva: {fileID: 0}
-  vahinko: 40
+  m_Script: {fileID: 11500000, guid: 3759af958d0385b4e932d91bf171b551, type: 3}
+  m_Name: Tavallinen miekka
+  m_EditorClassIdentifier: 
+  nimi: Normi miekka
+  inventoryKuva: {fileID: 0}
+  vahinko: 20

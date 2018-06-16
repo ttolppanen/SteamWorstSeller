@@ -402,7 +402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4392898697231234, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.4075815e-17
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4392898697231234, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -485,6 +485,15 @@ Prefab:
     - target: {fileID: 4209763860884592, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209763860884592, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 54438463702758150, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
@@ -583,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe04593a88155747889542e1446b42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esine: {fileID: 11400000, guid: 30bef10375451e84b890b4d250ef069e, type: 2}
+  esine: {fileID: 11400000, guid: cf56261aaa90ab647b1658a8503e3bd1, type: 2}
 --- !u!1 &1079626561
 GameObject:
   m_ObjectHideFlags: 0
