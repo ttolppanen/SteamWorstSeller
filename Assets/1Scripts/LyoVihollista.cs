@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class LyoVihollista : MonoBehaviour {
 
-    GameObject aseObjecti;
+    public GameObject aseenPaikka;
     Ase ase; //Itse ase
 
-    private void Start()
-    {
-        aseObjecti = GameObject.Find("AseenPaikka").transform.GetChild(0).gameObject;
-    }
 
     void Update () {
-        ase = (Ase)aseObjecti.GetComponent<EsineenOminaisuuksia>().esine;
+        ase = (Ase)aseenPaikka.transform.GetChild(0).GetComponent<EsineenOminaisuuksia>().esine;
         ase.animaatiot = GetComponent<Animator>();
         if (Input.GetMouseButtonDown(0))
         {

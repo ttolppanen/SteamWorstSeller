@@ -8,7 +8,7 @@ public class HurtBox : MonoBehaviour {
     public Vector3 verenSuunta; //Suunta vektorina
 
     float vahinko;
-    GameObject kasi; //Käsi
+    public  GameObject kasi; //Käsi
 
     private void Start()
     {
