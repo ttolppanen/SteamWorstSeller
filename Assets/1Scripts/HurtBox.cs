@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HurtBox : MonoBehaviour {
 
+    public GameObject veri;
+    public Vector3 verenSuunta; //Suunta vektorina
+
     float vahinko;
     GameObject kasi; //Käsi
 
@@ -22,6 +25,7 @@ public class HurtBox : MonoBehaviour {
         if (other.tag == "Enemy")
         {
             other.GetComponent<Elama>().OtaVahinkoa(vahinko);
+            Instantiate(veri, other.transform.position, Quaternion.LookRotation(verenSuunta, new Vector3(0, 1, 0)));
             gameObject.SetActive(false);
         }
     }
