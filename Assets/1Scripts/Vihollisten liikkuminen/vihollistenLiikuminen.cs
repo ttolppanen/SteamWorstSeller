@@ -15,6 +15,7 @@ public class vihollistenLiikuminen : MonoBehaviour {
 
 	void Start () {
         rb = GetComponent<Rigidbody>();
+        kiihtyvyys *= rb.mass;
         pelaaja = GameObject.FindGameObjectWithTag("Player");
         npScripti = GetComponent<NakeekoPelaajan>();
         vsScripti = GetComponent<VihollisenSeuraus>();

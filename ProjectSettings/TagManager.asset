@@ -8,6 +8,7 @@ TagManager:
   - PelaajanInventory
   - InventoryPalikka
   - Enemy
+  - Valo
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NaytaOikeaKuva : MonoBehaviour {
 
-    public Sprite[] kuvat;//0 on eteen, ja siitä kierretään vastapäivään(?)
+    public Sprite[] kuvat;//Pelaajasta päin 0 indeksi katsoo suoraan silmiin, 1 pelaajasta päin vähän oikealle, mutta kuitenkin näkyy etupuolta jonkun verran jne...
     SpriteRenderer spriteRenderer;
     GameObject pelaaja;
     Transform emo;
