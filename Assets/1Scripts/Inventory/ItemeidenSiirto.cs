@@ -1,77 +1,77 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ItemeidenSiirto : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
-{
+public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
-    Vector3 aloitusPaikka;
-
+    UiHallinta uhScripti;
+    Inventory iScripti; //Inventorio scripti
     GraphicRaycaster raycaster;
-    PointerEventData pointer;
-    EventSystem eventSystem;
     GameObject[,] pelaajanInventory;
-    RectTransform invBlockit;
-    Inventory invScripti;
+    Vector2Int mK; //Meidän koordinaatit
 
-    void Awake()
+
+    private void Start()
     {
-        raycaster = GameObject.Find("Canvas").GetComponent<GraphicRaycaster>();
-        eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-        invScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
-        pelaajanInventory = invScripti.inventory;
-        invBlockit = (RectTransform)GameObject.Find("InventoryBlockit").transform;
+        uhScripti = GameObject.Find("UiMainCanvas").GetComponent<UiHallinta>();
+        raycaster = GameObject.Find("UiMainCanvas").GetComponent<GraphicRaycaster>();
+        iScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
+        pelaajanInventory = iScripti.inventory;
+        mK = new Vector2Int(int.Parse(char.ToString(transform.name[0])), int.Parse(char.ToString(transform.name[1])));//Haetaan nimestä koordinaatit...
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    void Update () {
+        if (Input.GetMouseButtonDown(0))
+        {
+
+        }
+	}
+
+    public void OnPointerDown(PointerEventData eventData)
     {
-        aloitusPaikka = transform.position;
+        if (uhScripti.esineHiirenKannossa == null)
+        {
+            uhScripti.esineHiirenKannossa = transform.GetChild(0).gameObject;
+        }
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
-    }
+        if (uhScripti.esineHiirenKannossa == null)
+        {
+            return;
+        }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        transform.position = aloitusPaikka;
-        pointer = new PointerEventData(eventSystem);
-        pointer.position = Input.mousePosition;
         List<RaycastResult> results = new List<RaycastResult>();
         raycaster.Raycast(eventData, results);
         GameObject toinenPalikka = loydaEsine(results);
 
-        Vector2Int mK = GetComponent<PiirraInventory>().koordinaatit; //Meidän palikan koordinaatit
-
-        bool ollaankoInvAlueella = invBlockit.rect.Contains(Input.mousePosition);
-
+        bool ollaankoInvAlueella = ((RectTransform)transform.parent).rect.Contains(Input.mousePosition);//Parentti on se missä on kaikki blockit, katotaan ollaanok sen sisällä
         if (!ollaankoInvAlueella)
         {
-            invScripti.TiputaInventorysta(mK);
+            iScripti.TiputaInventorysta(mK);
             return;
         }
 
-        Vector2Int tK = toinenPalikka.GetComponent<PiirraInventory>().koordinaatit; //Toisen palikan koordinaatit
         if (toinenPalikka != null)
         {
             //Vaihdetaan paikat pelaajan inventoryssä...
+            Vector2Int tK = new Vector2Int(int.Parse(char.ToString(toinenPalikka.transform.name[0])), int.Parse(char.ToString(toinenPalikka.transform.name[1])));
             GameObject toinenPeliObjekti = pelaajanInventory[tK.x, tK.y];
             pelaajanInventory[tK.x, tK.y] = pelaajanInventory[mK.x, mK.y];
             pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
         }
-        else
-        {
-            pelaajanInventory[tK.x, tK.y] = pelaajanInventory[mK.x, mK.y];
-            pelaajanInventory[mK.x, mK.y] = null;
-        }
+        
+        uhScripti.esineHiirenKannossa.transform.position = uhScripti.esineHiirenKannossa.transform.parent.position;
+        uhScripti.esineHiirenKannossa = null;
     }
 
     GameObject loydaEsine(List<RaycastResult> lista)
     {
-        foreach (RaycastResult i in lista) {
+        foreach (RaycastResult i in lista)
+        {
             if (i.gameObject.tag == "InventoryPalikka")
             {
                 return i.gameObject;

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class PiirraInventory : MonoBehaviour {
 
-    GameObject[,] inventory; 
     Inventory ivScripti; //Inventorio scripti
-    public Vector2Int koordinaatit; // 0, 0 on vasen yläreuna
     Sprite kuva;
     Sprite tyhjaKuva;
+    public Vector2Int koordinaatit;
+    int koordinaatitInt;
 
     private void Awake()
     {
@@ -18,18 +18,18 @@ public class PiirraInventory : MonoBehaviour {
         tyhja.SetPixel(0, 0, Color.clear);
         tyhja.Apply();
         tyhjaKuva = Sprite.Create(tyhja, new Rect(0, 0, 1, 1), new Vector2(0.5f, 0.5f));
+        koordinaatit = new Vector2Int(int.Parse(char.ToString(transform.parent.name[0])), int.Parse(char.ToString(transform.parent.name[1])));//Haetaan emon nimestä koordinaatit...
     }
 
     void Update () {
-        inventory = ivScripti.inventory;
         PiirraKuva();
 	}
 
     void PiirraKuva()
     {
-        if (inventory[koordinaatit.x, koordinaatit.y] != null)
+        if (ivScripti.inventory[koordinaatit.x, koordinaatit.y] != null)
         {
-            kuva = inventory[koordinaatit.x, koordinaatit.y].GetComponent<EsineenOminaisuuksia>().esine.inventoryKuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
+            kuva = ivScripti.inventory[koordinaatit.x, koordinaatit.y].GetComponent<EsineenOminaisuuksia>().esine.inventoryKuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
             GetComponent<Image>().sprite = kuva;
         }
         else

@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour {
                 }
             }
         }*/
-	}
+    }
 
     private void OnTriggerStay(Collider other)
     {

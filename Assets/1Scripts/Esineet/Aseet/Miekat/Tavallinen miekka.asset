@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Tavallinen miekka
   m_EditorClassIdentifier: 
   nimi: Normi miekka
-  inventoryKuva: {fileID: 0}
+  inventoryKuva: {fileID: 21300000, guid: c58ecaaac8551dc4f82c7c8a4fe581bf, type: 3}
   vahinko: 20

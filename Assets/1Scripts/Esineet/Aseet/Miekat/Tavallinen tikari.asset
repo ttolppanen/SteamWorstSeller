@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Tavallinen tikari
   m_EditorClassIdentifier: 
   nimi: Tikari
-  inventoryKuva: {fileID: 0}
+  inventoryKuva: {fileID: 21300000, guid: dd80f75c78dffc84fa9d0d90382b08d5, type: 3}
   vahinko: 10
