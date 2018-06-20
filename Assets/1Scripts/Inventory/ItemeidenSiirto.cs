@@ -22,16 +22,9 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         mK = new Vector2Int(int.Parse(char.ToString(transform.name[0])), int.Parse(char.ToString(transform.name[1])));//Haetaan nimestä koordinaatit...
     }
 
-    void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
-
-        }
-	}
-
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (uhScripti.esineHiirenKannossa == null)
+        if (uhScripti.esineHiirenKannossa == null && pelaajanInventory[mK.x, mK.y] != null)
         {
             uhScripti.esineHiirenKannossa = transform.GetChild(0).gameObject;
         }
@@ -48,8 +41,7 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         raycaster.Raycast(eventData, results);
         GameObject toinenPalikka = loydaEsine(results);
 
-        bool ollaankoInvAlueella = ((RectTransform)transform.parent).rect.Contains(Input.mousePosition);//Parentti on se missä on kaikki blockit, katotaan ollaanok sen sisällä
-        if (!ollaankoInvAlueella)
+        if (toinenPalikka == null)
         {
             iScripti.TiputaInventorysta(mK);
             return;
