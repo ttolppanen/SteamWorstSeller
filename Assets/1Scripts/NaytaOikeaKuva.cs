@@ -9,15 +9,21 @@ public class NaytaOikeaKuva : MonoBehaviour {
     GameObject pelaaja;
     Transform emo;
     float osienValinenKulma;
+    Animator animaatiot;
 
     void Start() {
         pelaaja = GameObject.FindGameObjectWithTag("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
         emo = transform.parent;
+        animaatiot = emo.GetComponent<Animator>();
         osienValinenKulma = 360f / kuvat.Length;
     }
 
-    void Update() {
+    void LateUpdate() {
+        if (animaatiot.GetBool("Juoksussa"))
+        {
+            return;
+        }
         Vector3 suuntaPelaajaan = (pelaaja.transform.position - emo.position).normalized;
         float pelaajanJaVihollisenValinenKulma = Mathf.Acos(Vector3.Dot(suuntaPelaajaan, emo.forward)) * Mathf.Rad2Deg;
         if (float.IsNaN(pelaajanJaVihollisenValinenKulma))

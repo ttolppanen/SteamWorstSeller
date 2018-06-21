@@ -12,6 +12,7 @@ public class vihollistenLiikuminen : MonoBehaviour {
     VihollisenSeuraus vsScripti;
     LyoPelaajaa lpScripti;
     Vector3 seurausSuunta;
+    Animator animaatiot;
 
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -20,6 +21,7 @@ public class vihollistenLiikuminen : MonoBehaviour {
         npScripti = GetComponent<NakeekoPelaajan>();
         vsScripti = GetComponent<VihollisenSeuraus>();
         lpScripti = GetComponent<LyoPelaajaa>();
+        animaatiot = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,7 @@ public class vihollistenLiikuminen : MonoBehaviour {
         bool nahdaankoPelaaja = npScripti.nahdaankoPelaaja;
         bool pitaakoSeurata = vsScripti.pitaakoSeurata;
         bool ollaankoLyontiEtaisyydella = lpScripti.ollaankoLyontiEtaisyydella;
+        animaatiot.SetBool("Juoksussa", false);
 
         if (nahdaankoPelaaja)
         {
@@ -34,10 +37,10 @@ public class vihollistenLiikuminen : MonoBehaviour {
             seurausSuunta.y = 0;
         }
         if (pitaakoSeurata && !ollaankoLyontiEtaisyydella)
-
         {
             transform.LookAt(pelaaja.transform);
             rb.AddForce(seurausSuunta.normalized * kiihtyvyys);
+            animaatiot.SetBool("Juoksussa", true);
         }
         if (rb.velocity.magnitude > maxNopeus)
         {
