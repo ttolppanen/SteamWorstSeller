@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class katsoPelaajaPain : MonoBehaviour {
 
-    GameObject pelaaja;
+    GameObject kamera;
 
 	void Start () {
-        pelaaja = GameObject.FindGameObjectWithTag("Player");
+        kamera = GameObject.FindGameObjectWithTag("MainCamera");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(pelaaja.transform);
+        transform.LookAt(kamera.transform);
 	}
 }
