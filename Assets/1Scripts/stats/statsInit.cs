@@ -19,7 +19,7 @@ public class statsInit : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         statsTable = new Dictionary<stats, int>();
         statPool = 2;
         Randomize(statsTable);

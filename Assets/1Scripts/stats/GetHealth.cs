@@ -24,14 +24,6 @@ public class GetHealth : MonoBehaviour {
         text.text = stat.ToString();
     }
 
-    private void Update()
-    {
-        statsInit statFFU = player.GetComponent<statsInit>();
-        stat = statFFU.statsTable[type];
-        int what = stat + statChange;
-        text.text = what.ToString();
-    }
-
     public void add()
     {
         player = GameObject.Find("Cube");
