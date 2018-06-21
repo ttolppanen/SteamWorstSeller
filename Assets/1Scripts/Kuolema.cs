@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Kuolema : MonoBehaviour {
 
+    public GameObject sielu;
     Elama eScripti;
 
 	void Start () {
@@ -11,9 +12,9 @@ public class Kuolema : MonoBehaviour {
 	}
 	
 	void Update () {
-        bool onkoKuollut = eScripti.onkoKuollut;
-        if (onkoKuollut)
+        if (eScripti.onkoKuollut)
         {
+            Instantiate(sielu, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 	}
