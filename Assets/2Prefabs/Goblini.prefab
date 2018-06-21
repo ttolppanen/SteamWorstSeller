@@ -106,7 +106,7 @@ Animator:
   m_GameObject: {fileID: 1860829623745010}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b9811923fbac2cb48a173ac430950807, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5b628f49153461646832590259a4b321, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792717b226462aa40a0c840b1ff8a15c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sielu: {fileID: 1607722476628350, guid: b9408224cec3439459f92d33a2183bac, type: 2}
 --- !u!136 &136731553049557328
 CapsuleCollider:
   m_ObjectHideFlags: 1
