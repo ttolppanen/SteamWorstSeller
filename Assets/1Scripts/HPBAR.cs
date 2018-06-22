@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class HPBAR : MonoBehaviour {
 
+    public GameObject emo;
+
     Elama eScripti;
     float maxHP;
     float hp;
@@ -12,7 +14,7 @@ public class HPBAR : MonoBehaviour {
 
     private void Start()
     {
-        eScripti = GetComponentInParent<Elama>();
+        eScripti = emo.GetComponent<Elama>();
         hpBarKuva = GetComponent<Image>();
         maxHP = eScripti.maxHP;
     }
