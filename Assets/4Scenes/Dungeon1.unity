@@ -484,25 +484,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4096336483304934, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
+    - target: {fileID: 114897657261335044, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: staminanVahennysMaara
+      value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 4176118354810494, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710182817540528, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4096336483304934, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1289430145337056, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 114897657261335044, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: staminanPalautusMaara
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
@@ -567,74 +557,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8ed38d75df0c1d47b12090c64608569, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1191430769
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1973282613307042, guid: f8ed38d75df0c1d47b12090c64608569,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1191430770}
-  - component: {fileID: 1191430771}
-  m_Layer: 0
-  m_Name: Liekki
-  m_TagString: Valo
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1191430770
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4957812912192978, guid: f8ed38d75df0c1d47b12090c64608569,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1191430769}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.4499998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1888954496}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1191430771
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 108276060789001500, guid: f8ed38d75df0c1d47b12090c64608569,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1191430769}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.9581368, b: 0.9198113, a: 1}
-  m_Intensity: 0.5
-  m_Range: 60
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1001 &1284295883
 Prefab:
   m_ObjectHideFlags: 0
@@ -677,78 +599,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e660efc2c8cfaf4e9a3a2e9aece6515, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1594668326 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1606872537865466, guid: c64d43f9f4162764e887b033dff9ef7e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1011829382}
---- !u!114 &1594668327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594668326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e39b748e7d124e42813f9e313617f29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statPool: 2
---- !u!114 &1594668328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594668326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7964886989850684bbb6698a8b611745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxStamina: 100
-  staminaHp: 0
---- !u!114 &1594668337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594668326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec300eb1d4acaae42a3ad264413a9030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 100
-  onkoKuollut: 0
-  hp: 0
---- !u!114 &1594668338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594668326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add9278934d690a4f999239110ea1cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hyppyCooldown: 0.4
-  hyppyKorkeus: 1
-  kerroinEteen: 5
-  kerroinTaakse: 2
-  kerroinOikealle_Vasemmalle: 3
---- !u!114 &1594668339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594668326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca83db20488baf4998b0b0be9709e30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  torjutaanko: 0
 --- !u!1001 &1607362691
 Prefab:
   m_ObjectHideFlags: 0
@@ -799,11 +649,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef50f742dc9778e42884bc7a3478f308, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1888954496 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4209763860884592, guid: c64d43f9f4162764e887b033dff9ef7e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1011829382}
 --- !u!1001 &2135447851
 Prefab:
   m_ObjectHideFlags: 0

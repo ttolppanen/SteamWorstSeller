@@ -5,12 +5,33 @@ using UnityEngine;
 public class VihollistenHurtBox : MonoBehaviour {
 
     public float vahinko;
+    public bool parryykoPelaaja;
+    public bool pitaakoTarkistaaParry;
+    public GameObject stunTahdet;
+    public Transform stunTahdetSpawnPaikka;
+
+    Torjuminen tScripti;
+
+    private void Start()
+    {
+        pitaakoTarkistaaParry = false;
+        tScripti = GameObject.FindWithTag("Player").GetComponent<Torjuminen>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PelaajanElama>().OtaVahinkoa(vahinko);
+            if (tScripti.onkoParryPaalla && pitaakoTarkistaaParry)
+            {
+                Instantiate(stunTahdet, stunTahdetSpawnPaikka.position, Quaternion.identity);
+                Animator animaatiot = transform.parent.GetComponent<Animator>();
+                animaatiot.SetTrigger("Stunned");
+            }
+            else
+            {
+                other.GetComponent<PelaajanElama>().OtaVahinkoa(vahinko);
+            }
             gameObject.SetActive(false);
         }
     }

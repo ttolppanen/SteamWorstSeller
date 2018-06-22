@@ -19,4 +19,17 @@ public class ANIMVihollinen : MonoBehaviour {
     {
         hurtBox.SetActive(true);
     }
+
+    public void AloitaParrynTarkistus()
+    {
+        hurtBox.GetComponent<VihollistenHurtBox>().pitaakoTarkistaaParry = true;
+    }
+    public void LopetaParrynTarkistus()
+    {
+        hurtBox.GetComponent<VihollistenHurtBox>().pitaakoTarkistaaParry = false;
+    }
+
+    public void SammutaStunni()
+    {
+    }
 }
