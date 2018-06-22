@@ -128,9 +128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kuvat:
   - {fileID: 21300000, guid: d128086b91a53f74ebaf7601bf7aa4b6, type: 3}
-  - {fileID: 21300000, guid: a9ffc396ba86d214fa06975ac1a7a6bc, type: 3}
-  - {fileID: 21300000, guid: 6c2650e4d5869fb47a145e3cb9c281bb, type: 3}
   - {fileID: 21300000, guid: ab37c7f659d115e42822333ea1a2d961, type: 3}
+  - {fileID: 21300000, guid: 6c2650e4d5869fb47a145e3cb9c281bb, type: 3}
+  - {fileID: 21300000, guid: a9ffc396ba86d214fa06975ac1a7a6bc, type: 3}
 --- !u!114 &114290702793401350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,7 +294,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d128086b91a53f74ebaf7601bf7aa4b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.4}

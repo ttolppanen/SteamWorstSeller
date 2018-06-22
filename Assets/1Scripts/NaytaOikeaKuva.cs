@@ -20,7 +20,7 @@ public class NaytaOikeaKuva : MonoBehaviour {
     }
 
     void LateUpdate() {
-        if (animaatiot.GetBool("Juoksussa"))
+        if (animaatiot.GetBool("Juoksussa") || animaatiot.GetBool("Pitääkö lyödä"))
         {
             return;
         }
