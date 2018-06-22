@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4448783433854786}
   - component: {fileID: 212072688424965628}
-  - component: {fileID: 114862678656045098}
-  - component: {fileID: 114824729410605934}
   - component: {fileID: 54824090667881814}
+  - component: {fileID: 114753323122509004}
+  - component: {fileID: 114562724108775654}
   m_Layer: 0
   m_Name: Sielu
   m_TagString: Untagged
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1607722476628350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.541, y: 4.582, z: 18.77}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4302592079811992}
@@ -89,7 +89,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114824729410605934
+--- !u!114 &114562724108775654
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,11 +97,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607722476628350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe12aa5694493e24cba3381a7b86e43e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4788dde23195790489c911d3250257e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nopeusKerroin: 0.5
---- !u!114 &114862678656045098
+--- !u!114 &114753323122509004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,9 +108,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607722476628350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e569debccaf0d428454f3f19dbd666, type: 3}
+  m_Script: {fileID: 11500000, guid: 24b1fe6ed7bf0d547a1a7c45f563cda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nopeusKerroin: 1
 --- !u!198 &198246452806135268
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4659,8 +4659,8 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ced521072420c7b4ab59ac965d4fc7e2, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d7766188ed8460f429be61abf4c4277a, type: 2}
+  - {fileID: 2100000, guid: d7766188ed8460f429be61abf4c4277a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4714,7 +4714,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e9ce58ce34898144a9edeee1de64d99b, type: 2}
+  - {fileID: 2100000, guid: c6a8fd97d5bbfe7458661f2127e4dc19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4734,7 +4734,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 73a8eacf45afed8478fdf76bc201f088, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0066dbfd990c8c49aaf2d63794ae6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

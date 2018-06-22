@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4710182817540528}
   - component: {fileID: 65126613804905676}
-  - component: {fileID: 114412820065610454}
+  - component: {fileID: 114998616742761432}
   m_Layer: 0
   m_Name: HurtBox
   m_TagString: Untagged
@@ -172,14 +172,13 @@ GameObject:
   - component: {fileID: 54438463702758150}
   - component: {fileID: 136038594240987256}
   - component: {fileID: 95619627099030532}
-  - component: {fileID: 114298940152747260}
-  - component: {fileID: 114013580637891168}
-  - component: {fileID: 114801571000799462}
-  - component: {fileID: 114579143564867124}
-  - component: {fileID: 114059342732960108}
-  - component: {fileID: 114001314190017814}
-  - component: {fileID: 114195522651170270}
-  - component: {fileID: 114897657261335044}
+  - component: {fileID: 114856684765645012}
+  - component: {fileID: 114781287329078040}
+  - component: {fileID: 114840587866911076}
+  - component: {fileID: 114378447693210116}
+  - component: {fileID: 114276925761298380}
+  - component: {fileID: 114161285073518726}
+  - component: {fileID: 114105287570652492}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Player
@@ -314,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1334983168266524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7, y: -0.5, z: 0}
+  m_LocalPosition: {x: -0.8, y: -0.5, z: 0}
   m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4530810570920532}
@@ -327,13 +326,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519296546253590}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 3.685, z: -0.755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4209763860884592}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!4 &4142150328149812
 Transform:
   m_ObjectHideFlags: 1
@@ -387,7 +386,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319258005652660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.29, z: 1.105}
+  m_LocalPosition: {x: 0, y: 2.72, z: 1.105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4074887002754380}
@@ -482,7 +481,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265687685701124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0.8, y: -0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4441105586029138}
@@ -760,45 +759,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114001314190017814
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606872537865466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec300eb1d4acaae42a3ad264413a9030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 100
-  onkoKuollut: 0
-  hp: 0
---- !u!114 &114013580637891168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606872537865466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72029f41147bf2b4a9bcbcdc8acd9a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aseenPaikka: {fileID: 1395150654907476}
---- !u!114 &114059342732960108
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606872537865466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7964886989850684bbb6698a8b611745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxStamina: 100
-  staminaHp: 0
 --- !u!114 &114076491846971858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -813,7 +773,7 @@ MonoBehaviour:
   ruumis: {fileID: 1606872537865466}
   katsomisRaja: 60
   sensitivy: 3
---- !u!114 &114195522651170270
+--- !u!114 &114105287570652492
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -821,15 +781,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606872537865466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add9278934d690a4f999239110ea1cf4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0595b1163048cd84d8801a9defc4c279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hyppyCooldown: 0.4
-  hyppyKorkeus: 1
+--- !u!114 &114161285073518726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606872537865466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1e1ae55bc5ca24fb5e86ca93cd9e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hyppyCooldown: 0.5
+  hyppyKorkeus: 2
   kerroinEteen: 5
-  kerroinTaakse: 2
+  kerroinTaakse: 1
   kerroinOikealle_Vasemmalle: 3
---- !u!114 &114298940152747260
+--- !u!114 &114276925761298380
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -837,24 +808,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606872537865466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1bf23b3e9cb10c45b064b100f1a5925, type: 3}
+  m_Script: {fileID: 11500000, guid: e47307526dd72dd448b6d825097d1ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nopeusKerroin: 10
---- !u!114 &114412820065610454
+  maxHP: 100
+  onkoKuollut: 0
+  hp: 0
+--- !u!114 &114378447693210116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144223894274500}
+  m_GameObject: {fileID: 1606872537865466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38e5bef618b9baf46adcb5c07d98bdf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c3ba6941a04fd243ad871e778e6b6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  veri: {fileID: 1277438755424572, guid: f00de62976e3e5a4ca31e5b0c48a9550, type: 2}
-  verenSuunta: {x: 0, y: 0, z: 0}
-  kasi: {fileID: 0}
+  nopeusKerroin: 15
 --- !u!114 &114458667084372972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -880,7 +851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorynPaikka: {fileID: 4989508223739182}
   tiputusPaikka: {fileID: 4050124680681254}
---- !u!114 &114579143564867124
+--- !u!114 &114781287329078040
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -888,38 +859,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606872537865466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e39b748e7d124e42813f9e313617f29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statPool: 2
---- !u!114 &114801571000799462
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606872537865466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a82a12b96ed7e43ab21199ad28811c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114897657261335044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606872537865466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca83db20488baf4998b0b0be9709e30, type: 3}
+  m_Script: {fileID: 11500000, guid: 284851c1cb3812c459caa2e21cfc9bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   torjutaanko: 0
   staminanPalautusMaara: 10
   staminanVahennysMaara: 20
-  parryAika: 0.2
+  parryAika: 0.3
   parryCooldown: 1
   onkoParryPaalla: 0
+--- !u!114 &114840587866911076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606872537865466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cf2d0cf657f594fa39d0dcdf79bd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 100
+  staminaHp: 0
+--- !u!114 &114856684765645012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606872537865466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d47d64106acb74c9eda8472c0f14bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aseenPaikka: {fileID: 1395150654907476}
+--- !u!114 &114998616742761432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1144223894274500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6680c425dd5eafb449efbb9561bb9577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  veri: {fileID: 1277438755424572, guid: f00de62976e3e5a4ca31e5b0c48a9550, type: 2}
+  verenSuunta: {x: 0, y: 0, z: 0}
+  kasi: {fileID: 1265687685701124}
 --- !u!124 &124405011947416098
 Behaviour:
   m_ObjectHideFlags: 1
@@ -987,7 +974,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 99646d4c353bac54d9f0c4c9c24b9b86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4ad8b6c375df5542af48b52a9355cd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1032,12 +1019,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ea45d8c974ae204486f8523a2b135c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4144ccc7d1afb654c8f6fe8dbe540fd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1.6666666, y: 1.6666666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1122,12 +1109,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ea45d8c974ae204486f8523a2b135c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4144ccc7d1afb654c8f6fe8dbe540fd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1.6666666, y: 1.6666666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1167,7 +1154,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 99646d4c353bac54d9f0c4c9c24b9b86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4ad8b6c375df5542af48b52a9355cd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
