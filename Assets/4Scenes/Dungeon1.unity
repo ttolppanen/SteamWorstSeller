@@ -674,11 +674,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114549519640249304, guid: 3e660efc2c8cfaf4e9a3a2e9aece6515,
-        type: 2}
-      propertyPath: emo
-      value: 
-      objectReference: {fileID: 1594668326}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e660efc2c8cfaf4e9a3a2e9aece6515, type: 2}
   m_IsPrefabParent: 0
@@ -699,6 +694,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statPool: 2
+--- !u!114 &1594668328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594668326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7964886989850684bbb6698a8b611745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 100
+  staminaHp: 0
 --- !u!114 &1594668337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,7 +715,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1594668326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11d4c513109ffd043b1acd3810b0fed3, type: 3}
+  m_Script: {fileID: 11500000, guid: ec300eb1d4acaae42a3ad264413a9030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
@@ -724,9 +732,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add9278934d690a4f999239110ea1cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hyppyCooldown: 0.3
-  hyppyVoima: 2
+  hyppyCooldown: 0.4
   hyppyKorkeus: 1
+  kerroinEteen: 5
+  kerroinTaakse: 2
+  kerroinOikealle_Vasemmalle: 3
+--- !u!114 &1594668339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594668326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca83db20488baf4998b0b0be9709e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torjutaanko: 0
 --- !u!1001 &1607362691
 Prefab:
   m_ObjectHideFlags: 0

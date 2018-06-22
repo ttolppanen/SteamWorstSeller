@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class HPBAR : MonoBehaviour {
 
-
     PelaajanElama peScripti;
     float maxHP;
     float hp;
