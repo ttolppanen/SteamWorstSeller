@@ -10,7 +10,7 @@ public class VihollistenHurtBox : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Elama>().OtaVahinkoa(vahinko);
+            other.GetComponent<PelaajanElama>().OtaVahinkoa(vahinko);
             gameObject.SetActive(false);
         }
     }

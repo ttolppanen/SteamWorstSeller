@@ -5,23 +5,22 @@ using UnityEngine.UI;
 
 public class HPBAR : MonoBehaviour {
 
-    public GameObject emo;
 
-    Elama eScripti;
+    PelaajanElama peScripti;
     float maxHP;
     float hp;
     Image hpBarKuva;
 
     private void Start()
     {
-        eScripti = emo.GetComponent<Elama>();
+        peScripti = GameObject.FindGameObjectWithTag("Player").GetComponent<PelaajanElama>();
         hpBarKuva = GetComponent<Image>();
-        maxHP = eScripti.maxHP;
+        maxHP = peScripti.maxHP;
     }
 
     private void Update()
     {
-        hp = eScripti.hp;
+        hp = peScripti.hp;
         hpBarKuva.fillAmount = hp / maxHP;
     }
 
