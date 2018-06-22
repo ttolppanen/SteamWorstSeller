@@ -198,10 +198,6 @@ Prefab:
       propertyPath: m_Name
       value: Goblini (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 4007471307364690, guid: ef50f742dc9778e42884bc7a3478f308, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef50f742dc9778e42884bc7a3478f308, type: 2}
   m_IsPrefabParent: 0
@@ -678,6 +674,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114549519640249304, guid: 3e660efc2c8cfaf4e9a3a2e9aece6515,
+        type: 2}
+      propertyPath: emo
+      value: 
+      objectReference: {fileID: 1594668326}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e660efc2c8cfaf4e9a3a2e9aece6515, type: 2}
   m_IsPrefabParent: 0
@@ -698,6 +699,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statPool: 2
+--- !u!114 &1594668337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594668326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d4c513109ffd043b1acd3810b0fed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  onkoKuollut: 0
+  hp: 0
+--- !u!114 &1594668338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594668326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add9278934d690a4f999239110ea1cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hyppyCooldown: 0.3
+  hyppyVoima: 2
+  hyppyKorkeus: 1
 --- !u!1001 &1607362691
 Prefab:
   m_ObjectHideFlags: 0
