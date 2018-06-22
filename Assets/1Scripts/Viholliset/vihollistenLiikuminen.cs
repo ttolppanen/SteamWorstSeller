@@ -41,7 +41,7 @@ public class vihollistenLiikuminen : MonoBehaviour {
             transform.LookAt(pelaaja.transform);
             rb.AddForce(seurausSuunta.normalized * kiihtyvyys);
             animaatiot.SetBool("Juoksussa", true);
-            animaatiot.speed = 0.5f + rb.velocity.magnitude / (2 * maxNopeus);
+            animaatiot.speed = 0.5f + rb.velocity.magnitude / (2 * maxNopeus); //Korjaa tästä johtuva muiden animaatioiden hidastuminen joskus...
         }
         if (rb.velocity.magnitude > maxNopeus)
         {
