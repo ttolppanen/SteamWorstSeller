@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 224596856123747972}
   - component: {fileID: 222339984519482028}
   - component: {fileID: 114397098578172068}
-  - component: {fileID: 114479800752651476}
+  - component: {fileID: 114209865582645560}
   m_Layer: 5
   m_Name: Stamina
   m_TagString: Untagged
@@ -1314,6 +1314,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114209865582645560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676945134615120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459ea792617b2a043802ea0dd8e93271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114226192568315876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1606,7 +1617,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 04bb4448b8f88cb4e94bb67dd2ecfe8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ae4e9f61800c3f499fc802cf2401f9c, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1733,17 +1744,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114479800752651476
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1676945134615120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cd7f2e8ce911a940b17c99ecb0c8d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114483274415365688
 MonoBehaviour:
   m_ObjectHideFlags: 1

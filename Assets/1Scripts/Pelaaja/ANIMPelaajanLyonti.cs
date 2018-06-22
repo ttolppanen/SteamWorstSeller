@@ -5,10 +5,18 @@ using UnityEngine;
 public class ANIMPelaajanLyonti : MonoBehaviour {
 
     GameObject hurtBox;
+    GameObject aseenPaikka;
+    TrailRenderer aseenTrail;
 
     private void Start()
     {
         hurtBox = transform.Find("HurtBox").gameObject;
+        aseenPaikka = GameObject.Find("AseenPaikka");
+    }
+
+    private void Update()
+    {
+        aseenTrail = aseenPaikka.transform.GetChild(0).GetChild(0).GetComponent<TrailRenderer>(); //Haetaan aseenpaikan lapsen lapsesta traili
     }
 
     public void SammutaBoxi()
@@ -35,5 +43,9 @@ public class ANIMPelaajanLyonti : MonoBehaviour {
         {
             hurtBox.GetComponent<HurtBox>().verenSuunta = transform.right;
         }
+    }
+    public void ResettaaTrail()
+    {
+        aseenTrail.Clear();
     }
 }

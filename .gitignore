@@ -20,7 +20,6 @@
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
-*.lock
 
 \.vs/SteamWorstSeller/DesignTimeBuild/\.dtbcache
 
@@ -29,7 +28,5 @@ sysinfo.txt
 \.vs/SteamWorstSeller/DesignTimeBuild/
 
 \.vs/SteamWorstSeller/v15/Server/sqlite3/
-
-*.meta
 
 \.vs/SteamWorstSeller/v15/Browse\.VC\.opendb

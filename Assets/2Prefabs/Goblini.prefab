@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105910957543020}
   - component: {fileID: 65180845884749084}
-  - component: {fileID: 114238902984128942}
+  - component: {fileID: 114574071338400950}
   m_Layer: 9
   m_Name: VihollisenHurtBox
   m_TagString: Untagged
@@ -52,9 +52,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4635436008060832}
   - component: {fileID: 212496297015810764}
-  - component: {fileID: 114791140279093452}
-  - component: {fileID: 114071455879958970}
-  - component: {fileID: 114819954154952594}
+  - component: {fileID: 114863039122008374}
+  - component: {fileID: 114200408119109954}
+  - component: {fileID: 114779788004070404}
   m_Layer: 9
   m_Name: GoblininKuva
   m_TagString: Untagged
@@ -72,15 +72,15 @@ GameObject:
   - component: {fileID: 4007471307364690}
   - component: {fileID: 54045984065995448}
   - component: {fileID: 136731553049557328}
-  - component: {fileID: 114787215499265712}
-  - component: {fileID: 114290702793401350}
   - component: {fileID: 95971873562932844}
+  - component: {fileID: 114410182481958834}
+  - component: {fileID: 114890501905946934}
   - component: {fileID: 114660243370215280}
-  - component: {fileID: 114583303879932348}
-  - component: {fileID: 114899899339044502}
+  - component: {fileID: 114089870287361054}
+  - component: {fileID: 114157357194205482}
+  - component: {fileID: 114460437925990628}
+  - component: {fileID: 114803337916008860}
   - component: {fileID: 114982405696423930}
-  - component: {fileID: 114393738740527130}
-  - component: {fileID: 114318576615038270}
   m_Layer: 9
   m_Name: Goblini
   m_TagString: Enemy
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860829623745010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.643623, y: 1.71, z: 22.995935}
+  m_LocalPosition: {x: 58.63259, y: 1.98, z: -1.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4635436008060832}
@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1791337825459830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.141, y: 1.17, z: -2}
+  m_LocalPosition: {x: -0.141, y: 2.23, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4105910957543020}
@@ -179,7 +179,7 @@ Animator:
   m_GameObject: {fileID: 1860829623745010}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b628f49153461646832590259a4b321, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4bb861e192805104a95b790886919051, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -188,7 +188,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114071455879958970
+--- !u!114 &114089870287361054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860829623745010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195de8980f7bf5843a4ee3f77dc64abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seuraamisenLopetusAika: 5
+  pitaakoSeurata: 0
+--- !u!114 &114157357194205482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860829623745010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d132635e61d634ba1493dfd5f5465d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tallennusAika: 1
+--- !u!114 &114200408119109954
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -196,15 +221,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1815655971659816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7952399e41baddd499a2d15f0542753d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b108f1ce2168764aa92db43bf52eea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kuvat:
-  - {fileID: 21300000, guid: d128086b91a53f74ebaf7601bf7aa4b6, type: 3}
-  - {fileID: 21300000, guid: ab37c7f659d115e42822333ea1a2d961, type: 3}
-  - {fileID: 21300000, guid: 6c2650e4d5869fb47a145e3cb9c281bb, type: 3}
-  - {fileID: 21300000, guid: a9ffc396ba86d214fa06975ac1a7a6bc, type: 3}
---- !u!114 &114238902984128942
+--- !u!114 &114410182481958834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860829623745010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e95949ef2501944a0d01372f41ecdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114460437925990628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860829623745010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5681224057cf77409c768bcd464a300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nahdaankoPelaaja: 0
+  nakoAlue: 90
+  nakoMatka: 40
+--- !u!114 &114574071338400950
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -212,65 +257,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1699946501904848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d584aa39fdd5f3499c9ff52a261681d, type: 3}
+  m_Script: {fileID: 11500000, guid: f529bde84afd41244a0e9daaaf36ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vahinko: 10
+  vahinko: 18
   parryykoPelaaja: 0
   pitaakoTarkistaaParry: 0
-  stunTahdet: {fileID: 1044366088927456, guid: 131b02913c579954f88831231dca6f8c, type: 2}
+  stunTahdet: {fileID: 1044366088927456, guid: 347eec694f9884041bfb27d08b68f5ba, type: 2}
   stunTahdetSpawnPaikka: {fileID: 4008917275312024}
---- !u!114 &114290702793401350
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860829623745010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497c7ed174fdb394d9cae272d70b214e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nahdaankoPelaaja: 0
-  nakoAlue: 80
-  nakoMatka: 50
---- !u!114 &114318576615038270
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860829623745010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbfe8c46dc4d2854190341899c8e2163, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114393738740527130
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860829623745010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a6fcc5fbbc0ba40a1b3636606923e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ollaankoLyontiEtaisyydella: 0
-  lyontiEtaisyys: 5
---- !u!114 &114583303879932348
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860829623745010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d353b9f977674ca47869d8d926093890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seuraamisenLopetusAika: 4
-  pitaakoSeurata: 0
 --- !u!114 &114660243370215280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -285,7 +279,23 @@ MonoBehaviour:
   maxHP: 52
   onkoKuollut: 0
   hp: 0
---- !u!114 &114787215499265712
+--- !u!114 &114779788004070404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815655971659816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e728968793fbe47aabb1c606abf9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kuvat:
+  - {fileID: 21300000, guid: 3f8df16de62e11a409c2c2718d5147ae, type: 3}
+  - {fileID: 21300000, guid: a4bd0a7c226c8dc4c82e6e214990359c, type: 3}
+  - {fileID: 21300000, guid: cd5211ce05619a54c81b1a580bcfc555, type: 3}
+  - {fileID: 21300000, guid: 524aaa3267795a741a4e10e47b26ae3d, type: 3}
+--- !u!114 &114803337916008860
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -293,45 +303,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1860829623745010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3031afd67433f284db9e213668115a59, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f968df9f7d1f95459573d09e4bd1b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kiihtyvyys: 16
+  ollaankoLyontiEtaisyydella: 0
+  lyontiEtaisyys: 4
+--- !u!114 &114863039122008374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815655971659816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4788dde23195790489c911d3250257e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114890501905946934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860829623745010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc39333b7deaa147b2277c5e2a2e252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiihtyvyys: 30
   maxNopeus: 8
---- !u!114 &114791140279093452
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1815655971659816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e569debccaf0d428454f3f19dbd666, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114819954154952594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1815655971659816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f08ec976ede9e3746945a51201833adf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114899899339044502
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860829623745010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8712357fdaf39a946bc780efbb6b79e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tallennusAika: 0.5
 --- !u!114 &114982405696423930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792717b226462aa40a0c840b1ff8a15c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sielu: {fileID: 1607722476628350, guid: b9408224cec3439459f92d33a2183bac, type: 2}
+  sielu: {fileID: 1607722476628350, guid: e002f48e0cc36c9479c13cf2f7c577b2, type: 2}
 --- !u!136 &136731553049557328
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -392,12 +392,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d128086b91a53f74ebaf7601bf7aa4b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f8df16de62e11a409c2c2718d5147ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.4}
+  m_Size: {x: 2.3, y: 2.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
