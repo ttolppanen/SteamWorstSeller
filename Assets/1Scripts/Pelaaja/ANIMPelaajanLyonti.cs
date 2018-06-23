@@ -6,7 +6,7 @@ public class ANIMPelaajanLyonti : MonoBehaviour {
 
     GameObject hurtBox;
     GameObject aseenPaikka;
-    TrailRenderer aseenTrail;
+    Transform aseenTrail;
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class ANIMPelaajanLyonti : MonoBehaviour {
 
     private void Update()
     {
-        aseenTrail = aseenPaikka.transform.GetChild(0).GetChild(0).GetComponent<TrailRenderer>(); //Haetaan aseenpaikan lapsen lapsesta traili
+        aseenTrail = aseenPaikka.transform.GetChild(0).GetChild(0); //Haetaan aseenpaikan lapsen lapsesta traili
     }
 
     public void SammutaBoxi()
@@ -27,6 +27,7 @@ public class ANIMPelaajanLyonti : MonoBehaviour {
     {
         hurtBox.SetActive(true);
     }
+
     public void AsetaOikeaVerenSuunta(int suunta)//0 eteen, 1 vasemmalle
     {
         if (suunta == 0)
@@ -44,8 +45,14 @@ public class ANIMPelaajanLyonti : MonoBehaviour {
             hurtBox.GetComponent<HurtBox>().verenSuunta = transform.right;
         }
     }
-    public void ResettaaTrail()
+
+    public void LaitaPaalleTrail()
     {
-        aseenTrail.Clear();
+        aseenTrail.gameObject.SetActive(true);
+    }
+    public void SammutaTrail()
+    {
+        aseenTrail.gameObject.SetActive(false);
+        aseenTrail.GetComponent<TrailRenderer>().Clear();
     }
 }
