@@ -33,7 +33,7 @@ public class NakeekoPelaajan : MonoBehaviour {
         osumat = JarjestaPituudenMukaan(osumat);
         foreach (RaycastHit osuma in osumat)
         {
-            if (osuma.transform != transform || osuma.transform.tag != "Enemy")
+            if (osuma.transform != transform && osuma.transform.tag != "Enemy")
             {
                 if (osuma.transform != pelaaja.transform)
                 {

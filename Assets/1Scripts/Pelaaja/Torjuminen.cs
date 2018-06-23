@@ -5,7 +5,6 @@ using UnityEngine;
 public class Torjuminen : MonoBehaviour {
 
     public bool torjutaanko;
-    public float staminanPalautusMaara;
     public float staminanVahennysMaara;
     public float parryAika;
     public float parryCooldown;
@@ -34,10 +33,6 @@ public class Torjuminen : MonoBehaviour {
             onkoParryPaalla = true;
             voidaankoParryta = false;
             StartCoroutine(ParryAika());
-        }
-        else
-        {
-            sScripti.PalautaStaminaa(Time.deltaTime * staminanPalautusMaara);
         }
     }
 

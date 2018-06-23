@@ -197,6 +197,93 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4495ba084c84ac4c93ec354e80caea3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &687184293
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 63.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660243370215280, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: maxHP
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 212496297015810764, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f8df16de62e11a409c2c2718d5147ae,
+        type: 3}
+    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Name
+      value: Goblini (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815655971659816, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791337825459830, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699946501904848, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114803337916008860, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: lyontiEtaisyys
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65180845884749084, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &957693941
 Prefab:
   m_ObjectHideFlags: 0
@@ -359,6 +446,176 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e660efc2c8cfaf4e9a3a2e9aece6515, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1802097907
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 58.63259
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660243370215280, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: maxHP
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 212496297015810764, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f8df16de62e11a409c2c2718d5147ae,
+        type: 3}
+    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Name
+      value: Goblini (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815655971659816, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791337825459830, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699946501904848, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114803337916008860, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: lyontiEtaisyys
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65180845884749084, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1852875859
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 58.63259
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 23.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007471307364690, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660243370215280, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: maxHP
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 212496297015810764, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f8df16de62e11a409c2c2718d5147ae,
+        type: 3}
+    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Name
+      value: Goblini (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699946501904848, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791337825459830, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815655971659816, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114803337916008860, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: lyontiEtaisyys
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65180845884749084, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1856076335
 Prefab:
   m_ObjectHideFlags: 0
@@ -439,6 +696,69 @@ Prefab:
         type: 2}
       propertyPath: parryAika
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114840587866911076, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: staminaHp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: staminaMaksu
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: hyppyKorkeus
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: hyppyCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: kerroinEteen
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: kerroinOikealle_Vasemmalle
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: kerroinTaakse
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114840587866911076, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: staminanPalautusMaara
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114840587866911076, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: staminanPalautusAika
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144223894274500, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65126613804905676, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710182817540528, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 114378447693210116, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: taaksePainKerroin
+      value: 0.758
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
@@ -539,6 +859,32 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 3f8df16de62e11a409c2c2718d5147ae,
         type: 3}
+    - target: {fileID: 1815655971659816, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699946501904848, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791337825459830, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114803337916008860, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: lyontiEtaisyys
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65180845884749084, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
   m_IsPrefabParent: 0

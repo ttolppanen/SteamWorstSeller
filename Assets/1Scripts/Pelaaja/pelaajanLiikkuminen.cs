@@ -5,6 +5,8 @@ using UnityEngine;
 public class pelaajanLiikkuminen : MonoBehaviour {
 
     public float nopeusKerroin;
+    [Range(0f, 1f)]
+    public float taaksePainKerroin;
     Rigidbody rb;
 
 	void Start () {
@@ -18,7 +20,7 @@ public class pelaajanLiikkuminen : MonoBehaviour {
         }
         if (Input.GetKey("s"))
         {
-            rb.AddForce(-transform.forward * nopeusKerroin);
+            rb.AddForce(-transform.forward * nopeusKerroin * taaksePainKerroin);
         }
         if (Input.GetKey("a"))
         {
