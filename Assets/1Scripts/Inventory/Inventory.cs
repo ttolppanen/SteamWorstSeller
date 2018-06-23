@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
     public GameObject[,] inventory = new GameObject[10, 10];
+    public GameObject[] varusteet = new GameObject[4];
     public Transform inventorynPaikka;
     public Transform tiputusPaikka;
 

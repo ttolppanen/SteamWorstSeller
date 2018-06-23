@@ -710,7 +710,7 @@ Prefab:
     - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
         type: 2}
       propertyPath: hyppyKorkeus
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114161285073518726, guid: c64d43f9f4162764e887b033dff9ef7e,
         type: 2}
@@ -807,19 +807,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4441105586029138, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.17171894
+      value: 0.097134
       objectReference: {fileID: 0}
     - target: {fileID: 4441105586029138, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.48537564
+      value: 0.49433094
       objectReference: {fileID: 0}
     - target: {fileID: 4441105586029138, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.049539823
+      value: -0.0059046526
       objectReference: {fileID: 0}
     - target: {fileID: 4441105586029138, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.8558441
+      value: 0.86380965
       objectReference: {fileID: 0}
     - target: {fileID: 4441105586029138, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -831,7 +831,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4441105586029138, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4074887002754380, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
       propertyPath: m_LocalPosition.x
