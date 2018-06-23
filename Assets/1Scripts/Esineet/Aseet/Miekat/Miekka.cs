@@ -15,4 +15,12 @@ public class Miekka : Ase
     {
         animaatiot.SetTrigger("Lyö miekalla");
     }
+    public override void AloitaTorjuminen()
+    {
+        animaatiot.SetBool("Torjutaanko miekalla", true);
+    }
+    public override void LopetaTorjuminen()
+    {
+        animaatiot.SetBool("Torjutaanko miekalla", false);
+    }
 }

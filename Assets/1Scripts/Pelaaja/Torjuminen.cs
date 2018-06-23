@@ -10,29 +10,39 @@ public class Torjuminen : MonoBehaviour {
     public float parryCooldown;
     bool voidaankoParryta;
     public bool onkoParryPaalla;
+    GameObject oikeaKasi;
 
     Stamina sScripti;
 
     private void Start()
     {
         sScripti = GetComponent<Stamina>();
+        oikeaKasi = GameObject.Find("OikeaKäsi");
         voidaankoParryta = true;
         onkoParryPaalla = false;
+        torjutaanko = false;
     }
 
     private void Update()
     {
-        torjutaanko = false;
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
-            torjutaanko = true;
-            sScripti.VahennaStaminaa(Time.deltaTime * staminanVahennysMaara);
+            ((Ase)oikeaKasi.GetComponentInChildren<EsineenOminaisuuksia>().esine).AloitaTorjuminen();
+        }
+        else if (Input.GetMouseButtonUp(1))
+        {
+            ((Ase)oikeaKasi.GetComponentInChildren<EsineenOminaisuuksia>().esine).LopetaTorjuminen();
         }
         if (Input.GetMouseButtonDown(1) && voidaankoParryta)
         {
             onkoParryPaalla = true;
             voidaankoParryta = false;
             StartCoroutine(ParryAika());
+        }
+
+        if (torjutaanko)
+        {
+            sScripti.VahennaStaminaa(Time.deltaTime * staminanVahennysMaara);
         }
     }
 

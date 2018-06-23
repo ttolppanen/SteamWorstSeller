@@ -14,4 +14,6 @@ public class Ase : Esine
     }
 
     public virtual void Lyo() { }
+    public virtual void AloitaTorjuminen() { }
+    public virtual void LopetaTorjuminen() { }
 }
