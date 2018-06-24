@@ -63,8 +63,8 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         }
 
         if (toinenPalikka != null)
-        {
-            if (char.ToString(toinenPalikka.name[0]) == "V")
+        {   
+            if (char.ToString(toinenPalikka.name[0]) == "V")//TÄSSÄ EQUIPATAAN, JA SIIS KATSOTAAN ONKO TOINEN PALIKKA VARUSTEPALIKKA
             {
                 if (!onkoVarustePaikka && pelaajanInventory[mK.x, mK.y].GetComponent<EsineenOminaisuuksia>().esine is Varuste) //Katsotaanko ollaanko laittamassa päälle varustusta, eikä esim. potionia
                 {
@@ -74,8 +74,19 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                     if (varustePalikanIndeksi == varusteenIndeksi)
                     {
                         GameObject toinenPeliObjekti = pelaajanVarustus[varustePalikanIndeksi];
-                        pelaajanVarustus[varustePalikanIndeksi] = pelaajanInventory[mK.x, mK.y];
-                        pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
+                        if (varusteenIndeksi == (int)VarusteTyyppi.Ase)
+                        {
+                            iScripti.PoistaEsineKadesta();
+                            pelaajanVarustus[varustePalikanIndeksi] = pelaajanInventory[mK.x, mK.y];
+                            pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
+                            iScripti.AsetaEsineKateen(pelaajanVarustus[varustePalikanIndeksi]);
+
+                        }
+                        else
+                        {
+                            pelaajanVarustus[varustePalikanIndeksi] = pelaajanInventory[mK.x, mK.y];
+                            pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
+                        }
                     }
                 }
             }
@@ -83,10 +94,14 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             {
                 Vector2Int tK = new Vector2Int(int.Parse(char.ToString(toinenPalikka.name[0])), int.Parse(char.ToString(toinenPalikka.transform.name[1])));
                 GameObject toinenPeliObjekti = pelaajanInventory[tK.x, tK.y];
-                if (onkoVarustePaikka)
+                if (onkoVarustePaikka)//TÄSSÄ EQUIPATAAN
                 {
                     if (toinenPeliObjekti == null)
                     {
+                        if (mIndeksi == (int)VarusteTyyppi.Ase)
+                        {
+                            iScripti.PoistaEsineKadesta();
+                        }
                         pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
                         pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
                     }
@@ -97,8 +112,19 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                             int varusteenIndeksi = (int)((Varuste)toinenPeliObjekti.GetComponent<EsineenOminaisuuksia>().esine).varusteTyyppi; //Haetaan esineestä varusteTyyppi...
                             if (varusteenIndeksi == mIndeksi)
                             {
-                                pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
-                                pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
+                                if (varusteenIndeksi == (int)VarusteTyyppi.Ase)
+                                {
+                                    iScripti.PoistaEsineKadesta();
+                                    pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
+                                    pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
+                                    iScripti.AsetaEsineKateen(toinenPeliObjekti);
+
+                                }
+                                else
+                                {
+                                    pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
+                                    pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
+                                }
                             }
                         }
                     }

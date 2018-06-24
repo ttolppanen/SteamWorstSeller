@@ -9,6 +9,10 @@ public class LyoVihollista : MonoBehaviour {
 
 
     void Update () {
+        if (aseenPaikka.transform.childCount == 0)
+        {
+            return;
+        }
         ase = (Ase)aseenPaikka.transform.GetChild(0).GetComponent<EsineenOminaisuuksia>().esine;
         ase.animaatiot = GetComponent<Animator>();
         if (Input.GetMouseButtonDown(0))

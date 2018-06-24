@@ -9,10 +9,9 @@ public class Inventory : MonoBehaviour {
     public Transform inventorynPaikka;
     public Transform tiputusPaikka;
 
-	void Start () {
-	}
-	
-	void Update () {
+    public Transform aseenPaikka;
+
+    void Update() {
         /*if (Input.GetMouseButtonDown(1)) {
             for (int iy = 0; iy < inventory.GetLength(0); iy++)
             {
@@ -61,5 +60,22 @@ public class Inventory : MonoBehaviour {
         inventory[koordinaatit.x, koordinaatit.y].transform.position = tiputusPaikka.position;
         inventory[koordinaatit.x, koordinaatit.y].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         inventory[koordinaatit.x, koordinaatit.y] = null;
+    }
+
+    public void PoistaEsineKadesta()
+    {
+        if (aseenPaikka.childCount == 0)
+        {
+            return;
+        }
+        Transform aseKadessa = aseenPaikka.GetChild(0);
+        aseKadessa.parent = inventorynPaikka;
+        aseKadessa.position = inventorynPaikka.position;
+    }
+    public void AsetaEsineKateen(GameObject esine)
+    {
+        esine.transform.parent = aseenPaikka;
+        esine.transform.position = aseenPaikka.transform.position;
+        esine.transform.rotation = aseenPaikka.rotation;
     }
 }

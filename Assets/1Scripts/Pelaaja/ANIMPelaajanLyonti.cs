@@ -16,11 +16,6 @@ public class ANIMPelaajanLyonti : MonoBehaviour {
         tScripti = GetComponent<Torjuminen>();
     }
 
-    private void Update()
-    {
-        aseenTrail = aseenPaikka.transform.GetChild(0).GetChild(0); //Haetaan aseenpaikan lapsen lapsesta traili
-    }
-
     public void SammutaBoxi()
     {
         hurtBox.SetActive(false);
@@ -58,10 +53,12 @@ public class ANIMPelaajanLyonti : MonoBehaviour {
 
     public void LaitaPaalleTrail()
     {
+        aseenTrail = aseenPaikka.transform.GetChild(0).GetChild(0); //Haetaan aseenpaikan lapsen lapsesta traili
         aseenTrail.gameObject.SetActive(true);
     }
     public void SammutaTrail()
     {
+        aseenTrail = aseenPaikka.transform.GetChild(0).GetChild(0); //Haetaan aseenpaikan lapsen lapsesta traili
         aseenTrail.gameObject.SetActive(false);
         aseenTrail.GetComponent<TrailRenderer>().Clear();
     }
