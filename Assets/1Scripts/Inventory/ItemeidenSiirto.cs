@@ -58,11 +58,17 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
         if (toinenPalikka == null)
         {
-            iScripti.TiputaInventorysta(mK);
+            if (onkoVarustePaikka)
+            {
+                iScripti.TiputaInventorysta(mIndeksi);
+            }
+            else
+            {
+                iScripti.TiputaInventorysta(mK);
+            }
             return;
         }
-
-        if (toinenPalikka != null)
+        else
         {   
             if (char.ToString(toinenPalikka.name[0]) == "V")//TÄSSÄ EQUIPATAAN, JA SIIS KATSOTAAN ONKO TOINEN PALIKKA VARUSTEPALIKKA
             {

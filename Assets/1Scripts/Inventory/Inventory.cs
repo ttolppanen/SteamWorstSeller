@@ -32,6 +32,10 @@ public class Inventory : MonoBehaviour {
         if (other.tag == "Esine" && Input.GetKey("f"))
         {
             LaitaEsineTyhjaanPaikkaan(other.transform.parent.gameObject);
+            foreach (Collider coll in other.transform.parent.GetComponents<Collider>())
+            {
+                coll.enabled = false;
+            }
         }
     }
 
@@ -59,7 +63,22 @@ public class Inventory : MonoBehaviour {
         inventory[koordinaatit.x, koordinaatit.y].transform.parent = null;
         inventory[koordinaatit.x, koordinaatit.y].transform.position = tiputusPaikka.position;
         inventory[koordinaatit.x, koordinaatit.y].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        foreach (Collider coll in inventory[koordinaatit.x, koordinaatit.y].GetComponents<Collider>())
+        {
+            coll.enabled = true;
+        }
         inventory[koordinaatit.x, koordinaatit.y] = null;
+    }
+    public void TiputaInventorysta(int indeksi)
+    {
+        varusteet[indeksi].transform.parent = null;
+        varusteet[indeksi].transform.position = tiputusPaikka.position;
+        varusteet[indeksi].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        foreach (Collider coll in varusteet[indeksi].GetComponents<Collider>())
+        {
+            coll.enabled = true;
+        }
+        varusteet[indeksi] = null;
     }
 
     public void PoistaEsineKadesta()
