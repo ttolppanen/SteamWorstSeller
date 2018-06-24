@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ase : Esine
+public class Ase : Varuste
 {
 
     public float vahinko;
     public Animator animaatiot { get; set; }
 
-    public Ase(string nimi, float vahinko, Sprite kuva) : base(nimi, kuva)
+    public Ase(string nimi, Sprite kuva, float paino, float vahinko) : base(nimi, paino, kuva)
     {
         this.vahinko = vahinko;
     }

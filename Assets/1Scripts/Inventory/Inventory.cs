@@ -5,12 +5,11 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
     public GameObject[,] inventory = new GameObject[10, 10];
-    public GameObject[] varusteet = new GameObject[4];
+    public GameObject[] varusteet = new GameObject[5]; //VarusteTyyppi enum....
     public Transform inventorynPaikka;
     public Transform tiputusPaikka;
 
 	void Start () {
-		
 	}
 	
 	void Update () {

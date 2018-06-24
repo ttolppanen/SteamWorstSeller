@@ -8,9 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 057f172d07b128b4baa99403e31625ac, type: 3}
-  m_Name: Tavallinen tikari
+  m_Script: {fileID: 11500000, guid: edc42d6043db8f24092fe0e00d109874, type: 3}
+  m_Name: Haarniska
   m_EditorClassIdentifier: 
-  nimi: Tikari
-  inventoryKuva: {fileID: 21300000, guid: dd80f75c78dffc84fa9d0d90382b08d5, type: 3}
-  vahinko: 10
+  nimi: saasdasd
+  inventoryKuva: {fileID: 21300000, guid: 1789bf754d3c8634da9a0602231a3eca, type: 3}
+  paino: 1
+  varusteTyyppi: 1
+  defence: 1

@@ -8,11 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c979af70eff96f4b840a0e549fbaafa, type: 3}
+  m_Script: {fileID: 11500000, guid: edc42d6043db8f24092fe0e00d109874, type: 3}
   m_Name: "Kyp\xE4r\xE4"
   m_EditorClassIdentifier: 
-  nimi: "Tavallinen kyp\xE4r\xE4"
+  nimi: asdasd
   inventoryKuva: {fileID: 21300000, guid: 67528c2af77426d42ae7dbf6079e04e8, type: 3}
-  defence: 10
-  paino: 2
+  paino: 1
   varusteTyyppi: 0
+  defence: 1
