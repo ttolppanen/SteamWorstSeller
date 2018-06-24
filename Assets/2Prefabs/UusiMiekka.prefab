@@ -20,8 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4899865255189554}
   - component: {fileID: 212176062616623018}
+  - component: {fileID: 54541307415547282}
+  - component: {fileID: 65151234624346162}
   - component: {fileID: 114603396919814012}
-  m_Layer: 0
+  - component: {fileID: 136557096078813860}
+  m_Layer: 11
   m_Name: UusiMiekka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,13 +40,42 @@ GameObject:
   m_Component:
   - component: {fileID: 4631917413260096}
   - component: {fileID: 96280889232234742}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1995935442984400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4145741113525206}
+  - component: {fileID: 135585416246666644}
+  m_Layer: 11
+  m_Name: EsineenPickupAlue
+  m_TagString: Esine
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4145741113525206
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995935442984400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4899865255189554}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4631917413260096
 Transform:
   m_ObjectHideFlags: 1
@@ -63,14 +95,42 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1215726715260252}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.030683225, y: -0, z: -0, w: 0.9995292}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4631917413260096}
+  - {fileID: 4145741113525206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.5170002, y: 0, z: 0}
+--- !u!54 &54541307415547282
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215726715260252}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65151234624346162
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215726715260252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8913307, y: 0.199512, z: 0.2}
+  m_Center: {x: -0.009843826, y: 0.20855105, z: 0}
 --- !u!96 &96280889232234742
 TrailRenderer:
   serializedVersion: 2
@@ -173,7 +233,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe04593a88155747889542e1446b42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esine: {fileID: 11400000, guid: cf56261aaa90ab647b1658a8503e3bd1, type: 2}
+  esine: {fileID: 11400000, guid: c07f41df1e833bc448ca5593982abec9, type: 2}
+--- !u!135 &135585416246666644
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995935442984400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.0744743
+  m_Center: {x: 0, y: 1.574482, z: -0.000000003864758}
+--- !u!136 &136557096078813860
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215726715260252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.11994743
+  m_Height: 4.375197
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5570462, z: 0}
 --- !u!212 &212176062616623018
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -208,7 +293,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 062c2b0daa36b514e9e5bdd294001c10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

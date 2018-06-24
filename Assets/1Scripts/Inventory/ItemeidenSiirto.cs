@@ -148,7 +148,6 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             if (i.gameObject.tag == "InventoryPalikka")
             {
-                print(i.gameObject.name);
                 return i.gameObject;
             }
         }

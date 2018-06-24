@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour {
     {
         if (other.tag == "Esine" && Input.GetKey("f"))
         {
-            LaitaEsineTyhjaanPaikkaan(other.gameObject);
+            LaitaEsineTyhjaanPaikkaan(other.transform.parent.gameObject);
         }
     }
 
@@ -71,11 +71,13 @@ public class Inventory : MonoBehaviour {
         Transform aseKadessa = aseenPaikka.GetChild(0);
         aseKadessa.parent = inventorynPaikka;
         aseKadessa.position = inventorynPaikka.position;
+        aseKadessa.localScale = new Vector3(1, 1, 1);
     }
     public void AsetaEsineKateen(GameObject esine)
     {
         esine.transform.parent = aseenPaikka;
         esine.transform.position = aseenPaikka.transform.position;
         esine.transform.rotation = aseenPaikka.rotation;
+        esine.transform.localScale = new Vector3(1, esine.transform.localScale.y, esine.transform.localScale.z);
     }
 }
