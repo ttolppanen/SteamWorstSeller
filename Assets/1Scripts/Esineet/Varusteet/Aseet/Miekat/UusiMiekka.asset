@@ -16,3 +16,5 @@ MonoBehaviour:
   paino: 5
   varusteTyyppi: 4
   vahinko: 35
+  vahinkoTyyppi: 0
+  aseTyyppi: 1

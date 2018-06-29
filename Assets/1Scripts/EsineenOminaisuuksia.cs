@@ -6,4 +6,8 @@ public class EsineenOminaisuuksia : MonoBehaviour {
 
     public Esine esine;
 
+    private void Start()
+    {
+    }
+
 }

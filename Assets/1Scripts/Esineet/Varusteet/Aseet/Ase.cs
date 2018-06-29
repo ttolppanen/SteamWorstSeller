@@ -7,6 +7,7 @@ public class Ase : Varuste
 
     public float vahinko;
     public VahinkoTyyppi vahinkoTyyppi;
+    public AseTyyppi aseTyyppi;
     public Animator animaatiot { get; set; }
 
     public Ase(string nimi, Sprite kuva, float paino, float vahinko) : base(nimi, paino, kuva)
@@ -20,3 +21,4 @@ public class Ase : Varuste
 }
 
 public enum VahinkoTyyppi {Viilto, tylppa, pistava}
+public enum AseTyyppi {Kevyt, KeskiRaskas, Raskas} // Paremmat nimet...

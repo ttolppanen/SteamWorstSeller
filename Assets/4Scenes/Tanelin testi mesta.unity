@@ -389,58 +389,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 395210015}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &713423919
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -38.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 21.78625
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562777442308884, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1495059568333360, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-      propertyPath: m_Name
-      value: Esine (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114694831229849044, guid: bcd672dae31571841bb42293ff3b71eb,
-        type: 2}
-      propertyPath: esine
-      value: 
-      objectReference: {fileID: 11400000, guid: d687d810857384b42a27f1dcc345485d,
-        type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: bcd672dae31571841bb42293ff3b71eb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &927536533
 GameObject:
   m_ObjectHideFlags: 0
