@@ -15,10 +15,10 @@ public class Ase : Varuste
         this.vahinko = vahinko;
     }
 
-    public virtual void Lyo() { }
-    public virtual void AloitaTorjuminen() { }
-    public virtual void LopetaTorjuminen() { }
+    public void Lyo() { animaatiot.SetTrigger("Lyö"); }
+    public virtual void AloitaTorjuminen() { animaatiot.SetBool("Torjutaanko", true); }
+    public virtual void LopetaTorjuminen() { animaatiot.SetBool("Torjutaanko", false); }
 }
 
 public enum VahinkoTyyppi {Viilto, tylppa, pistava}
-public enum AseTyyppi {Kevyt, KeskiRaskas, Raskas} // Paremmat nimet...
+public enum AseTyyppi {Kadet, Kevyt, KeskiRaskas, Raskas} // Paremmat nimet...

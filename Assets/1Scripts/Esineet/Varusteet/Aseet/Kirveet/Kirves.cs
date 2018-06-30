@@ -10,17 +10,4 @@ public class Kirves : Ase
     {
     }
 
-
-    public override void Lyo()
-    {
-        animaatiot.SetTrigger("Lyö kirveellä");
-    }
-    public override void AloitaTorjuminen()
-    {
-        animaatiot.SetBool("Torjutaanko kirveellä", true);
-    }
-    public override void LopetaTorjuminen()
-    {
-        animaatiot.SetBool("Torjutaanko kirveellä", false);
-    }
 }

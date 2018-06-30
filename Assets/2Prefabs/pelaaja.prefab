@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 114276925761298380}
   - component: {fileID: 114161285073518726}
   - component: {fileID: 114105287570652492}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4392898697231234}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pelaaja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1334983168266524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79999995, y: -1.25, z: 1.1}
+  m_LocalPosition: {x: -0.8, y: -1.25, z: 1.1}
   m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4530810570920532}
@@ -327,7 +327,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898709157493618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2766137, y: -3.04, z: 0.7136596}
+  m_LocalPosition: {x: -41.77, y: -4, z: 17.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4209763860884592}
@@ -341,7 +341,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395150654907476}
   m_LocalRotation: {x: 0.097134, y: 0.49433094, z: -0.0059046526, w: 0.86380965}
-  m_LocalPosition: {x: 0, y: 0.111, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4976417525211022}
@@ -355,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 1899798224009962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4074887002754380}
   m_RootOrder: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nopeusKerroin: 15
-  taaksePainKerroin: 0.758
+  taaksePainKerroin: 0.8
 --- !u!114 &114459948222705784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -833,7 +833,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a4ad8b6c375df5542af48b52a9355cd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -968,7 +968,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a4ad8b6c375df5542af48b52a9355cd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -11,8 +11,4 @@ public class Tikari : Ase
 
     }
 
-    public override void Lyo()
-    {
-        animaatiot.SetTrigger("Lyö tikarilla");
-    }
 }
