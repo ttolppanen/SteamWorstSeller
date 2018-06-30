@@ -44,12 +44,11 @@ public class AllStats : MonoBehaviour {
     {
         GameObject[] playersEquipment = Inventory.instance.equipment;
         int totalDefence = 0;
-        foreach (GameObject itemObject in playersEquipment)
+        for (int i = 0; i < (int)EquipmentType.Weapon; i++)
         {
-            Equipment item = (Equipment)itemObject.GetComponent<ItemProperties>().item;
-            if (item is Armor)
+            if (playersEquipment[i] != null)
             {
-                totalDefence += ((Armor)item).defence;
+                totalDefence += ((Armor)playersEquipment[i].GetComponent<ItemProperties>().item).defence;
             }
         }
         return totalDefence;

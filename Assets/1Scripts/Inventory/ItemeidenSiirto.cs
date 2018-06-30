@@ -9,7 +9,6 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     //TÄMÄ ON SEKAVASTI TEHTY, VARMAANKIN JOKU FIKSUMPI TAPA ON OLEMASSA MUTTA IHAN SAMA JOS TOIMII
 
     UiHallinta uhScripti;
-    Inventory iScripti; //Inventorio scripti
     GraphicRaycaster raycaster;
     GameObject[,] pelaajanInventory;
     GameObject[] pelaajanVarustus;
@@ -22,9 +21,8 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         uhScripti = GameObject.Find("UiMainCanvas").GetComponent<UiHallinta>();
         raycaster = GameObject.Find("UiMainCanvas").GetComponent<GraphicRaycaster>();
-        iScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
-        pelaajanInventory = iScripti.inventory;
-        pelaajanVarustus = iScripti.equipment;
+        pelaajanInventory = Inventory.instance.inventory;
+        pelaajanVarustus = Inventory.instance.equipment;
         if (char.ToString(transform.name[0]) != "V")//Pitää miettiä tämä!!!!
         {
             mK = new Vector2Int(int.Parse(char.ToString(transform.name[0])), int.Parse(char.ToString(transform.name[1])));//Haetaan nimestä koordinaatit...
@@ -60,11 +58,11 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             if (onkoVarustePaikka)
             {
-                iScripti.TiputaInventorysta(mIndeksi);
+                Inventory.instance.TiputaInventorysta(mIndeksi);
             }
             else
             {
-                iScripti.TiputaInventorysta(mK);
+                Inventory.instance.TiputaInventorysta(mK);
             }
             return;
         }
@@ -82,10 +80,10 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                         GameObject toinenPeliObjekti = pelaajanVarustus[varustePalikanIndeksi];
                         if (varusteenIndeksi == (int)EquipmentType.Weapon)
                         {
-                            iScripti.PoistaEsineKadesta();
+                            Inventory.instance.PoistaEsineKadesta();
                             pelaajanVarustus[varustePalikanIndeksi] = pelaajanInventory[mK.x, mK.y];
                             pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
-                            iScripti.AsetaEsineKateen(pelaajanVarustus[varustePalikanIndeksi]);
+                            Inventory.instance.AsetaEsineKateen(pelaajanVarustus[varustePalikanIndeksi]);
 
                         }
                         else
@@ -106,7 +104,7 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                     {
                         if (mIndeksi == (int)EquipmentType.Weapon)
                         {
-                            iScripti.PoistaEsineKadesta();
+                            Inventory.instance.PoistaEsineKadesta();
                         }
                         pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
                         pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
@@ -120,10 +118,10 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                             {
                                 if (varusteenIndeksi == (int)EquipmentType.Weapon)
                                 {
-                                    iScripti.PoistaEsineKadesta();
+                                    Inventory.instance.PoistaEsineKadesta();
                                     pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
                                     pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
-                                    iScripti.AsetaEsineKateen(toinenPeliObjekti);
+                                    Inventory.instance.AsetaEsineKateen(toinenPeliObjekti);
 
                                 }
                                 else
