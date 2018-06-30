@@ -19,24 +19,24 @@ public class PelaajanElama : MonoBehaviour {
         sScripti = GetComponent<Stamina>();
     }
 
-    public void OtaVahinkoa(float vahinko)
+    public void OtaVahinkoa(float damage)
     {
         if (tScripti.torjutaanko)
         {
-            if (sScripti.staminaHp - vahinko < 0)
+            if (sScripti.staminaHp - damage < 0)
             {
-                hp -= (vahinko - sScripti.staminaHp);
+                hp -= (damage - sScripti.staminaHp);
                 TarkistaOnkoKuollut();
                 sScripti.staminaHp = 0;
             }
             else
             {
-                sScripti.VahennaStaminaa(vahinko);
+                sScripti.VahennaStaminaa(damage);
             }
         }
         else
         {
-            hp -= vahinko;
+            hp -= damage;
             TarkistaOnkoKuollut();
         }
     }

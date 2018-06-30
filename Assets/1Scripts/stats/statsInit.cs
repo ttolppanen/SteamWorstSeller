@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class statsInit : MonoBehaviour {
-    public enum stats { Health, Strength, Intelligence };
+    public enum stats { Health, Strength, Intelligence, Defence, WeaponType };
     public int statPool;
     public Dictionary<stats, int> statsTable;
 

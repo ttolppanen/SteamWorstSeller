@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
     public GameObject[,] inventory = new GameObject[10, 10];
-    public GameObject[] varusteet = new GameObject[5]; //VarusteTyyppi enum....
+    public GameObject[] varusteet = new GameObject[5]; //EquipmentType enum....
     public Transform inventorynPaikka;
     public Transform tiputusPaikka;
 
@@ -41,14 +41,14 @@ public class Inventory : MonoBehaviour {
 
 
 
-    void LaitaEsineTyhjaanPaikkaan(GameObject esine) {
+    void LaitaEsineTyhjaanPaikkaan(GameObject item) {
         for (int iy = 0; iy < inventory.GetLength(0); iy++)
         {
             for (int ix = 0; ix < inventory.GetLength(1); ix++)
             {
                 if (inventory[ix, iy] == null)
                 {
-                    inventory[ix, iy] = esine;
+                    inventory[ix, iy] = item;
                     inventory[ix, iy].transform.parent = inventorynPaikka;
                     inventory[ix, iy].transform.position = inventorynPaikka.position;
                     inventory[ix, iy].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
@@ -92,11 +92,11 @@ public class Inventory : MonoBehaviour {
         aseKadessa.position = inventorynPaikka.position;
         aseKadessa.localScale = new Vector3(1, 1, 1);
     }
-    public void AsetaEsineKateen(GameObject esine)
+    public void AsetaEsineKateen(GameObject item)
     {
-        esine.transform.parent = aseenPaikka;
-        esine.transform.position = aseenPaikka.transform.position;
-        esine.transform.rotation = aseenPaikka.rotation;
-        esine.transform.localScale = new Vector3(1, esine.transform.localScale.y, esine.transform.localScale.z);
+        item.transform.parent = aseenPaikka;
+        item.transform.position = aseenPaikka.transform.position;
+        item.transform.rotation = aseenPaikka.rotation;
+        item.transform.localScale = new Vector3(1, item.transform.localScale.y, item.transform.localScale.z);
     }
 }

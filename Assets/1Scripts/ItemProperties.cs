@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EsineenOminaisuuksia : MonoBehaviour {
+public class ItemProperties : MonoBehaviour {
 
-    public Esine esine;
+    public Item item;
 
     private void Start()
     {

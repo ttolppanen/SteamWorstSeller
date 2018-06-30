@@ -45,7 +45,7 @@ public class PiirraInventory : MonoBehaviour {
         {
             if (pelaajanInventory[koordinaatit.x, koordinaatit.y] != null)
             {
-                kuva = pelaajanInventory[koordinaatit.x, koordinaatit.y].GetComponent<EsineenOminaisuuksia>().esine.inventoryKuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
+                kuva = pelaajanInventory[koordinaatit.x, koordinaatit.y].GetComponent<ItemProperties>().item.inventoryPicture; //Haetaan kuva EsineenOminaisuudet scriptistä.
                 GetComponent<Image>().sprite = kuva;
             }
             else
@@ -57,7 +57,7 @@ public class PiirraInventory : MonoBehaviour {
         {
             if (pelaajanVarustus[varusteIndeksi] != null)
             {
-                kuva = pelaajanVarustus[varusteIndeksi].GetComponent<EsineenOminaisuuksia>().esine.inventoryKuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
+                kuva = pelaajanVarustus[varusteIndeksi].GetComponent<ItemProperties>().item.inventoryPicture; //Haetaan kuva EsineenOminaisuudet scriptistä.
                 GetComponent<Image>().sprite = kuva;
             }
             else

@@ -8,7 +8,7 @@ public class HurtBox : MonoBehaviour {
     public Vector3 verenSuunta; //Suunta vektorina
     public float kuinkaEteenVeriSpawnaa;
 
-    float vahinko;
+    float damage;
     public  GameObject kasi; //Käsi
 
     private void Start()
@@ -20,9 +20,9 @@ public class HurtBox : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
-            vahinko = ((Ase)kasi.transform.GetChild(0).GetComponent<EsineenOminaisuuksia>().esine).vahinko;
+            damage = ((Weapon)kasi.transform.GetChild(0).GetComponent<ItemProperties>().item).damage;
             Vector3 suuntaVihollisestaPelaajaan = (transform.position - other.transform.position).normalized;
-            other.GetComponent<Elama>().OtaVahinkoa(vahinko);
+            other.GetComponent<Elama>().OtaVahinkoa(damage);
             Instantiate(veri, other.transform.position + suuntaVihollisestaPelaajaan * kuinkaEteenVeriSpawnaa, Quaternion.LookRotation(verenSuunta, new Vector3(0, 1, 0)));
             gameObject.SetActive(false);
         }
