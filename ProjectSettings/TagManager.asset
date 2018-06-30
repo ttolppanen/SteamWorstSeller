@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Esine
   - PelaajanInventory
   - InventoryPalikka
   - Enemy
   - Valo
+  - Item
   layers:
   - Default
   - TransparentFX

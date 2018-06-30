@@ -600,6 +600,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &690034756 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1334983168266524, guid: c64d43f9f4162764e887b033dff9ef7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 690034755}
+--- !u!114 &690034757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 690034756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc95353c4ff5c4e41817d99d0fc28399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: {fileID: 1921361721863416, guid: 3106ff386aede8941ad982922e69b132, type: 2}
+  projectileSpeed: 50
 --- !u!1 &927536533
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +867,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 3a0f13943b0077341801fa9105e42a17,
         type: 2}
+    - target: {fileID: 1995935442984400, guid: abf60c5b0bcca4a4dac6fd3af82d4930, type: 2}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abf60c5b0bcca4a4dac6fd3af82d4930, type: 2}
   m_IsPrefabParent: 0
@@ -983,7 +1005,7 @@ GameObject:
   - component: {fileID: 1707842134}
   m_Layer: 11
   m_Name: EsineenPickupAlue
-  m_TagString: Esine
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

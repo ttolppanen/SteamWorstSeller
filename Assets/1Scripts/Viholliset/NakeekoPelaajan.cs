@@ -101,7 +101,7 @@ public class NakeekoPelaajan : MonoBehaviour {
         return NormaaliNakoKentta(kulma, rot);*/
     }
 
-    RaycastHit[] JarjestaPituudenMukaan(RaycastHit[] osumat)//JOS ON TÄMÄ LAGAA NIIN LOYTYY HELPPO RATKAISUööööööööö TAI EI MUTTA VOIS MIETTIÄ TARVIIKO OIKEASTI LISTAA SIITÄ VAI MITÄ???????
+    public static RaycastHit[] JarjestaPituudenMukaan(RaycastHit[] osumat)//JOS ON TÄMÄ LAGAA NIIN LOYTYY HELPPO RATKAISUööööööööö TAI EI MUTTA VOIS MIETTIÄ TARVIIKO OIKEASTI LISTAA SIITÄ VAI MITÄ???????
     {
         List<RaycastHit> jarjestettuLista = new List<RaycastHit>();
         foreach (RaycastHit osuma in osumat)
