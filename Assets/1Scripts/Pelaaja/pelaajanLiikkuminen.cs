@@ -14,7 +14,7 @@ public class pelaajanLiikkuminen : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (Input.GetKey("w")) {
             rb.AddForce(transform.forward * nopeusKerroin);
         }

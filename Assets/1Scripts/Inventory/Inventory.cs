@@ -48,6 +48,7 @@ public class Inventory : MonoBehaviour {
         if (other.tag == "Esine" && Input.GetKey("f"))
         {
             LaitaEsineTyhjaanPaikkaan(other.transform.parent.gameObject);
+            other.GetComponent<Collider>().enabled = false;
             foreach (Collider coll in other.transform.parent.GetComponents<Collider>())
             {
                 coll.enabled = false;
@@ -83,6 +84,7 @@ public class Inventory : MonoBehaviour {
         {
             coll.enabled = true;
         }
+        inventory[koordinaatit.x, koordinaatit.y].GetComponentInChildren<Collider>().enabled = true;
         inventory[koordinaatit.x, koordinaatit.y] = null;
     }
     public void TiputaInventorysta(int indeksi)
@@ -113,7 +115,7 @@ public class Inventory : MonoBehaviour {
         item.transform.parent = aseenPaikka;
         item.transform.position = aseenPaikka.transform.position;
         item.transform.rotation = aseenPaikka.rotation;
-        item.transform.localScale = new Vector3(1, item.transform.localScale.y, item.transform.localScale.z);
+        item.transform.localScale = new Vector3(1, 1, item.transform.localScale.z);
     }
 
     public Weapon GetWeaponInHand()

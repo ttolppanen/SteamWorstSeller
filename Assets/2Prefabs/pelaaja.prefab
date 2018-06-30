@@ -52,7 +52,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798466473899990}
-  - component: {fileID: 114920561832697228}
   m_Layer: 0
   m_Name: "K\xE4det"
   m_TagString: Untagged
@@ -163,6 +162,7 @@ GameObject:
   - component: {fileID: 114276925761298380}
   - component: {fileID: 114161285073518726}
   - component: {fileID: 114105287570652492}
+  - component: {fileID: 114258460053875870}
   m_Layer: 12
   m_Name: Cube
   m_TagString: Player
@@ -180,6 +180,21 @@ GameObject:
   - component: {fileID: 4050124680681254}
   m_Layer: 0
   m_Name: tiputusPaikka
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1852789526557954
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4677822237780744}
+  m_Layer: 0
+  m_Name: "K\xE4sienPaikka"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +327,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 5.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4798466473899990}
+  - {fileID: 4677822237780744}
   - {fileID: 4708421037255162}
   - {fileID: 4096336483304934}
   - {fileID: 4176118354810494}
@@ -360,6 +375,20 @@ Transform:
   m_Father: {fileID: 4074887002754380}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4677822237780744
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852789526557954}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.738, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4798466473899990}
+  m_Father: {fileID: 4209763860884592}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4708421037255162
 Transform:
   m_ObjectHideFlags: 1
@@ -393,12 +422,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1170094419695158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.738, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4074887002754380}
   - {fileID: 4976417525211022}
-  m_Father: {fileID: 4209763860884592}
+  m_Father: {fileID: 4677822237780744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4878017633517552
@@ -614,12 +643,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519296546253590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e33dd595fab5eb429196ba22715d2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ruumis: {fileID: 1606872537865466}
+  ruumis: {fileID: 0}
   katsomisRaja: 60
   sensitivy: 3
 --- !u!114 &114105287570652492
@@ -650,6 +679,17 @@ MonoBehaviour:
   kerroinEteen: 4
   kerroinTaakse: 2
   kerroinOikealle_Vasemmalle: 4
+--- !u!114 &114258460053875870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606872537865466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d050fd94a0a38d94ab770be38ed203e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114276925761298380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -688,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57222f9a24ec7a4ab94403ac0e2f3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  varusteet:
+  equipment:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -740,18 +780,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aseenPaikka: {fileID: 1395150654907476}
---- !u!114 &114920561832697228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1170094419695158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 706ef1bda14a5074ab01b69824dbd66a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotaatioKerroin: 1
 --- !u!114 &114998616742761432
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,7 +6,6 @@ public class kamera : MonoBehaviour {
 
     public GameObject ruumis;
     public float katsomisRaja;
-    Vector3 ruumiinPaikka;
     public float sensitivy;
 
     void Update() {
