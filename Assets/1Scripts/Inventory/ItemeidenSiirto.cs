@@ -24,7 +24,7 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         raycaster = GameObject.Find("UiMainCanvas").GetComponent<GraphicRaycaster>();
         iScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
         pelaajanInventory = iScripti.inventory;
-        pelaajanVarustus = iScripti.varusteet;
+        pelaajanVarustus = iScripti.equipment;
         if (char.ToString(transform.name[0]) != "V")//Pitää miettiä tämä!!!!
         {
             mK = new Vector2Int(int.Parse(char.ToString(transform.name[0])), int.Parse(char.ToString(transform.name[1])));//Haetaan nimestä koordinaatit...
@@ -146,6 +146,8 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         uhScripti.esineHiirenKannossa.GetComponent<Canvas>().sortingOrder = 1;
         uhScripti.esineHiirenKannossa.transform.position = uhScripti.esineHiirenKannossa.transform.parent.position;
         uhScripti.esineHiirenKannossa = null;
+
+        AllStats.instance.UpdatePlayerStats();
     }
 
     GameObject loydaEsine(List<RaycastResult> lista)

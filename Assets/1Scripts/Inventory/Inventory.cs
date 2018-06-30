@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
+    public static Inventory instance;
+
     public GameObject[,] inventory = new GameObject[10, 10];
-    public GameObject[] varusteet = new GameObject[5]; //EquipmentType enum....
+    public GameObject[] equipment = new GameObject[5]; //EquipmentType enum....
     public Transform inventorynPaikka;
     public Transform tiputusPaikka;
 
     public Transform aseenPaikka;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     void Update() {
         /*if (Input.GetMouseButtonDown(1)) {
@@ -71,14 +87,14 @@ public class Inventory : MonoBehaviour {
     }
     public void TiputaInventorysta(int indeksi)
     {
-        varusteet[indeksi].transform.parent = null;
-        varusteet[indeksi].transform.position = tiputusPaikka.position;
-        varusteet[indeksi].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        foreach (Collider coll in varusteet[indeksi].GetComponents<Collider>())
+        equipment[indeksi].transform.parent = null;
+        equipment[indeksi].transform.position = tiputusPaikka.position;
+        equipment[indeksi].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        foreach (Collider coll in equipment[indeksi].GetComponents<Collider>())
         {
             coll.enabled = true;
         }
-        varusteet[indeksi] = null;
+        equipment[indeksi] = null;
     }
 
     public void PoistaEsineKadesta()
@@ -98,5 +114,16 @@ public class Inventory : MonoBehaviour {
         item.transform.position = aseenPaikka.transform.position;
         item.transform.rotation = aseenPaikka.rotation;
         item.transform.localScale = new Vector3(1, item.transform.localScale.y, item.transform.localScale.z);
+    }
+
+    public Weapon GetWeaponInHand()
+    {
+        if (equipment[(int)EquipmentType.Weapon] == null)
+        {
+            return null;
+        }
+        else {
+            return (Weapon)equipment[(int)EquipmentType.Weapon].GetComponent<ItemProperties>().item;
+        }
     }
 }

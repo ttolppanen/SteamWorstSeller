@@ -18,7 +18,7 @@ public class PiirraInventory : MonoBehaviour {
         varusteIndeksi = 69; //69 on tarkistus numero!!!
         ivScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
         pelaajanInventory = ivScripti.inventory;
-        pelaajanVarustus = ivScripti.varusteet;
+        pelaajanVarustus = ivScripti.equipment;
 
         Texture2D tyhja = new Texture2D(1, 1, TextureFormat.ARGB32, false);
         tyhja.SetPixel(0, 0, Color.clear);
