@@ -18,7 +18,7 @@ public class PiirraInventory : MonoBehaviour {
         varusteIndeksi = 69; //69 on tarkistus numero!!!
         ivScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
         pelaajanInventory = ivScripti.inventory;
-        pelaajanVarustus = ivScripti.varusteet;
+        pelaajanVarustus = ivScripti.equipment;
 
         Texture2D tyhja = new Texture2D(1, 1, TextureFormat.ARGB32, false);
         tyhja.SetPixel(0, 0, Color.clear);
@@ -45,7 +45,7 @@ public class PiirraInventory : MonoBehaviour {
         {
             if (pelaajanInventory[koordinaatit.x, koordinaatit.y] != null)
             {
-                kuva = pelaajanInventory[koordinaatit.x, koordinaatit.y].GetComponent<EsineenOminaisuuksia>().esine.inventoryKuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
+                kuva = pelaajanInventory[koordinaatit.x, koordinaatit.y].GetComponent<ItemProperties>().item.inventoryPicture; //Haetaan kuva EsineenOminaisuudet scriptistä.
                 GetComponent<Image>().sprite = kuva;
             }
             else
@@ -57,7 +57,7 @@ public class PiirraInventory : MonoBehaviour {
         {
             if (pelaajanVarustus[varusteIndeksi] != null)
             {
-                kuva = pelaajanVarustus[varusteIndeksi].GetComponent<EsineenOminaisuuksia>().esine.inventoryKuva; //Haetaan kuva EsineenOminaisuudet scriptistä.
+                kuva = pelaajanVarustus[varusteIndeksi].GetComponent<ItemProperties>().item.inventoryPicture; //Haetaan kuva EsineenOminaisuudet scriptistä.
                 GetComponent<Image>().sprite = kuva;
             }
             else

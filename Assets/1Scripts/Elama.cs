@@ -14,9 +14,9 @@ public class Elama : MonoBehaviour {
         onkoKuollut = false;
     }
 
-    public void OtaVahinkoa(float vahinko)
+    public void OtaVahinkoa(float damage)
     {
-        hp -= vahinko;
+        hp -= damage;
         if (hp <= 0)
         {
             onkoKuollut = true;

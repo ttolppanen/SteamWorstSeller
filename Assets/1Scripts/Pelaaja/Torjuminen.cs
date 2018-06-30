@@ -27,11 +27,11 @@ public class Torjuminen : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(1))
         {
-            ((Ase)oikeaKasi.GetComponentInChildren<EsineenOminaisuuksia>().esine).AloitaTorjuminen();
+            ((Weapon)oikeaKasi.GetComponentInChildren<ItemProperties>().item).BeginBlocking();
         }
         else if (Input.GetMouseButtonUp(1))
         {
-            ((Ase)oikeaKasi.GetComponentInChildren<EsineenOminaisuuksia>().esine).LopetaTorjuminen();
+            ((Weapon)oikeaKasi.GetComponentInChildren<ItemProperties>().item).StopBlocking();
         }
         if (Input.GetMouseButtonDown(1) && voidaankoParryta)
         {

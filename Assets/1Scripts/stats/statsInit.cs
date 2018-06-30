@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class statsInit : MonoBehaviour {
     public enum stats { Health, Strength, Intelligence };
     public int statPool;

@@ -9,7 +9,6 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     //TÄMÄ ON SEKAVASTI TEHTY, VARMAANKIN JOKU FIKSUMPI TAPA ON OLEMASSA MUTTA IHAN SAMA JOS TOIMII
 
     UiHallinta uhScripti;
-    Inventory iScripti; //Inventorio scripti
     GraphicRaycaster raycaster;
     GameObject[,] pelaajanInventory;
     GameObject[] pelaajanVarustus;
@@ -22,9 +21,8 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         uhScripti = GameObject.Find("UiMainCanvas").GetComponent<UiHallinta>();
         raycaster = GameObject.Find("UiMainCanvas").GetComponent<GraphicRaycaster>();
-        iScripti = GameObject.Find("PelaajanInventory").GetComponent<Inventory>();
-        pelaajanInventory = iScripti.inventory;
-        pelaajanVarustus = iScripti.varusteet;
+        pelaajanInventory = Inventory.instance.inventory;
+        pelaajanVarustus = Inventory.instance.equipment;
         if (char.ToString(transform.name[0]) != "V")//Pitää miettiä tämä!!!!
         {
             mK = new Vector2Int(int.Parse(char.ToString(transform.name[0])), int.Parse(char.ToString(transform.name[1])));//Haetaan nimestä koordinaatit...
@@ -60,11 +58,11 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             if (onkoVarustePaikka)
             {
-                iScripti.TiputaInventorysta(mIndeksi);
+                Inventory.instance.TiputaInventorysta(mIndeksi);
             }
             else
             {
-                iScripti.TiputaInventorysta(mK);
+                Inventory.instance.TiputaInventorysta(mK);
             }
             return;
         }
@@ -72,20 +70,20 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {   
             if (char.ToString(toinenPalikka.name[0]) == "V")//TÄSSÄ EQUIPATAAN, JA SIIS KATSOTAAN ONKO TOINEN PALIKKA VARUSTEPALIKKA
             {
-                if (!onkoVarustePaikka && pelaajanInventory[mK.x, mK.y].GetComponent<EsineenOminaisuuksia>().esine is Varuste) //Katsotaanko ollaanko laittamassa päälle varustusta, eikä esim. potionia
+                if (!onkoVarustePaikka && pelaajanInventory[mK.x, mK.y].GetComponent<ItemProperties>().item is Equipment) //Katsotaanko ollaanko laittamassa päälle varustusta, eikä esim. potionia
                 {
-                    int varustePalikanIndeksi = int.Parse(char.ToString(toinenPalikka.name[1])); //Peliobjektin nimeen laitettu mikä paikka, 0 on pää, jne menee samalla lailla kun enum VarusteTyyppi
-                    int varusteenIndeksi = (int)((Varuste)pelaajanInventory[mK.x, mK.y].GetComponent<EsineenOminaisuuksia>().esine).varusteTyyppi; //Haetaan esineestä varusteTyyppi...
+                    int varustePalikanIndeksi = int.Parse(char.ToString(toinenPalikka.name[1])); //Peliobjektin nimeen laitettu mikä paikka, 0 on pää, jne menee samalla lailla kun enum EquipmentType
+                    int varusteenIndeksi = (int)((Equipment)pelaajanInventory[mK.x, mK.y].GetComponent<ItemProperties>().item).equipmentType; //Haetaan esineestä equipmentType...
 
                     if (varustePalikanIndeksi == varusteenIndeksi)
                     {
                         GameObject toinenPeliObjekti = pelaajanVarustus[varustePalikanIndeksi];
-                        if (varusteenIndeksi == (int)VarusteTyyppi.Ase)
+                        if (varusteenIndeksi == (int)EquipmentType.Weapon)
                         {
-                            iScripti.PoistaEsineKadesta();
+                            Inventory.instance.PoistaEsineKadesta();
                             pelaajanVarustus[varustePalikanIndeksi] = pelaajanInventory[mK.x, mK.y];
                             pelaajanInventory[mK.x, mK.y] = toinenPeliObjekti;
-                            iScripti.AsetaEsineKateen(pelaajanVarustus[varustePalikanIndeksi]);
+                            Inventory.instance.AsetaEsineKateen(pelaajanVarustus[varustePalikanIndeksi]);
 
                         }
                         else
@@ -104,26 +102,26 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                 {
                     if (toinenPeliObjekti == null)
                     {
-                        if (mIndeksi == (int)VarusteTyyppi.Ase)
+                        if (mIndeksi == (int)EquipmentType.Weapon)
                         {
-                            iScripti.PoistaEsineKadesta();
+                            Inventory.instance.PoistaEsineKadesta();
                         }
                         pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
                         pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
                     }
                     else
                     {
-                        if (toinenPeliObjekti.GetComponent<EsineenOminaisuuksia>().esine is Varuste)
+                        if (toinenPeliObjekti.GetComponent<ItemProperties>().item is Equipment)
                         {
-                            int varusteenIndeksi = (int)((Varuste)toinenPeliObjekti.GetComponent<EsineenOminaisuuksia>().esine).varusteTyyppi; //Haetaan esineestä varusteTyyppi...
+                            int varusteenIndeksi = (int)((Equipment)toinenPeliObjekti.GetComponent<ItemProperties>().item).equipmentType; //Haetaan esineestä equipmentType...
                             if (varusteenIndeksi == mIndeksi)
                             {
-                                if (varusteenIndeksi == (int)VarusteTyyppi.Ase)
+                                if (varusteenIndeksi == (int)EquipmentType.Weapon)
                                 {
-                                    iScripti.PoistaEsineKadesta();
+                                    Inventory.instance.PoistaEsineKadesta();
                                     pelaajanInventory[tK.x, tK.y] = pelaajanVarustus[mIndeksi];
                                     pelaajanVarustus[mIndeksi] = toinenPeliObjekti;
-                                    iScripti.AsetaEsineKateen(toinenPeliObjekti);
+                                    Inventory.instance.AsetaEsineKateen(toinenPeliObjekti);
 
                                 }
                                 else
@@ -146,6 +144,8 @@ public class ItemeidenSiirto : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         uhScripti.esineHiirenKannossa.GetComponent<Canvas>().sortingOrder = 1;
         uhScripti.esineHiirenKannossa.transform.position = uhScripti.esineHiirenKannossa.transform.parent.position;
         uhScripti.esineHiirenKannossa = null;
+
+        AllStats.instance.UpdatePlayerStats();
     }
 
     GameObject loydaEsine(List<RaycastResult> lista)

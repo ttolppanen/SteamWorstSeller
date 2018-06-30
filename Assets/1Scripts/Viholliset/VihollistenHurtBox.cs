@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VihollistenHurtBox : MonoBehaviour {
 
-    public float vahinko;
+    public float damage;
     public bool parryykoPelaaja;
     public bool pitaakoTarkistaaParry;
     public GameObject stunTahdet;
@@ -30,7 +30,7 @@ public class VihollistenHurtBox : MonoBehaviour {
             }
             else
             {
-                other.GetComponent<PelaajanElama>().OtaVahinkoa(vahinko);
+                other.GetComponent<PelaajanElama>().OtaVahinkoa(damage);
             }
             gameObject.SetActive(false);
         }
