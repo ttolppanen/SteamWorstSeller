@@ -193,6 +193,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4677822237780744}
+  - component: {fileID: 114537746173017240}
   m_Layer: 0
   m_Name: "K\xE4sienPaikka"
   m_TagString: Untagged
@@ -643,12 +644,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519296546253590}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e33dd595fab5eb429196ba22715d2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ruumis: {fileID: 0}
+  ruumis: {fileID: 1606872537865466}
   katsomisRaja: 60
   sensitivy: 3
 --- !u!114 &114105287570652492
@@ -715,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3ba6941a04fd243ad871e778e6b6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nopeusKerroin: 15
+  nopeusKerroin: 30
   taaksePainKerroin: 0.8
 --- !u!114 &114459948222705784
 MonoBehaviour:
@@ -737,6 +738,18 @@ MonoBehaviour:
   inventorynPaikka: {fileID: 4989508223739182}
   tiputusPaikka: {fileID: 4050124680681254}
   aseenPaikka: {fileID: 4441105586029138}
+--- !u!114 &114537746173017240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852789526557954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706ef1bda14a5074ab01b69824dbd66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotaatioKerroin: 1
 --- !u!114 &114781287329078040
 MonoBehaviour:
   m_ObjectHideFlags: 1
