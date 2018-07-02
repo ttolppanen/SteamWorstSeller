@@ -45,11 +45,10 @@ public class Inventory : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Esine" && Input.GetKey("f"))
+        if (other.tag == "Item" && Input.GetKey("f"))
         {
-            LaitaEsineTyhjaanPaikkaan(other.transform.parent.gameObject);
-            other.GetComponent<Collider>().enabled = false;
-            foreach (Collider coll in other.transform.parent.GetComponents<Collider>())
+            LaitaEsineTyhjaanPaikkaan(other.gameObject);
+            foreach (Collider coll in other.GetComponents<Collider>())
             {
                 coll.enabled = false;
             }
@@ -84,7 +83,6 @@ public class Inventory : MonoBehaviour {
         {
             coll.enabled = true;
         }
-        inventory[koordinaatit.x, koordinaatit.y].GetComponentInChildren<Collider>().enabled = true;
         inventory[koordinaatit.x, koordinaatit.y] = null;
     }
     public void TiputaInventorysta(int indeksi)
