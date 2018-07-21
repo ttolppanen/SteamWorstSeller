@@ -4,30 +4,29 @@ using UnityEngine;
 
 public class VihollisenSeuraus : MonoBehaviour {
 
-    NakeekoPelaajan npScripti;
     public float seuraamisenLopetusAika;
     public bool pitaakoSeurata;
     float aika;
+    EnStates states;
 
     private void Start()
     {
-        npScripti = GetComponent<NakeekoPelaajan>();
+        states = GetComponent<EnStates>();
         pitaakoSeurata = false;
     }
 
     private void Update()
     {
-        bool nahdaankoPelaaja = npScripti.nahdaankoPelaaja;
-        if (nahdaankoPelaaja)
+        if (states.seesPlayer)
         {
-            pitaakoSeurata = true;
+            states.isFollowing = true;
             aika = 0;
         }
         else
         {
             if (aika > seuraamisenLopetusAika)
             {
-                pitaakoSeurata = false;
+                states.isFollowing = false;
             }
         }
         aika += Time.deltaTime;

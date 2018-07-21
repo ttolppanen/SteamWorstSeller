@@ -13,6 +13,7 @@ public class RandomMovement : MonoBehaviour {
     Rigidbody rb;
     float acceleration;
     float maxSpeed;
+    EnStates states;
 
     void Start () {
         startingPoint = transform.position;
@@ -20,11 +21,15 @@ public class RandomMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         maxSpeed = GetComponent<vihollistenLiikuminen>().maxNopeus;
         acceleration = GetComponent<vihollistenLiikuminen>().kiihtyvyys;
+        states = GetComponent<EnStates>();
     }
 
     void FixedUpdate()
     {
-        rb.AddForce(randomDirection.normalized * acceleration);
+        if (states.isIdle)
+        {
+            rb.AddForce(randomDirection.normalized * acceleration);
+        }
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
@@ -41,7 +46,10 @@ public class RandomMovement : MonoBehaviour {
 
     IEnumerator move()
     {
-        SetRandomPlace();
+        if (states.isIdle)
+        {
+            SetRandomPlace();
+        }
         yield return new WaitForSeconds(Random.Range(minTime, maxTime));
         StartCoroutine(move());
     }

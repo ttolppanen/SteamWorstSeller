@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class LyoPelaajaa : MonoBehaviour {
 
-	public bool ollaankoLyontiEtaisyydella;
     public float lyontiEtaisyys;
-    NakeekoPelaajan npScripti;
+    EnStates states;
     Animator animaatiot;
 
     GameObject pelaaja;
@@ -15,21 +14,21 @@ public class LyoPelaajaa : MonoBehaviour {
     {
         pelaaja = GameObject.FindGameObjectWithTag("Player");
         animaatiot = GetComponent<Animator>();
-        npScripti = GetComponent<NakeekoPelaajan>();
+        states = GetComponent<EnStates>();
     }
 
     private void Update()
     {
         float etaisyys = (new Vector2(pelaaja.transform.position.x, pelaaja.transform.position.z) - new Vector2(transform.position.x, transform.position.z)).magnitude;
-        if (etaisyys <= lyontiEtaisyys && npScripti.nahdaankoPelaaja)
+        if (etaisyys <= lyontiEtaisyys && states.seesPlayer)
         {
-            ollaankoLyontiEtaisyydella = true;
+            states.inHittingRange = true;
             transform.LookAt(pelaaja.transform);
             animaatiot.SetBool("Pitääkö lyödä", true);
         }
         else
         {
-            ollaankoLyontiEtaisyydella = false;
+            states.inHittingRange = false;
             animaatiot.SetBool("Pitääkö lyödä", false);
         }
     }

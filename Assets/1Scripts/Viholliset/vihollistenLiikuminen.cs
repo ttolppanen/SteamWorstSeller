@@ -8,35 +8,28 @@ public class vihollistenLiikuminen : MonoBehaviour {
     public float maxNopeus;
     GameObject pelaaja;
     Rigidbody rb;
-    NakeekoPelaajan npScripti;
-    VihollisenSeuraus vsScripti;
-    LyoPelaajaa lpScripti;
     Vector3 seurausSuunta;
     Animator animaatiot;
+    EnStates states;
 
 	void Start () {
         rb = GetComponent<Rigidbody>();
         kiihtyvyys *= rb.mass;
         pelaaja = GameObject.FindGameObjectWithTag("Player");
-        npScripti = GetComponent<NakeekoPelaajan>();
-        vsScripti = GetComponent<VihollisenSeuraus>();
-        lpScripti = GetComponent<LyoPelaajaa>();
         animaatiot = GetComponent<Animator>();
+        states = GetComponent<EnStates>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        bool nahdaankoPelaaja = npScripti.nahdaankoPelaaja;
-        bool pitaakoSeurata = vsScripti.pitaakoSeurata;
-        bool ollaankoLyontiEtaisyydella = lpScripti.ollaankoLyontiEtaisyydella;
         animaatiot.SetBool("Juoksussa", false);
 
-        if (nahdaankoPelaaja)
+        if (states.seesPlayer)
         {
             seurausSuunta = (pelaaja.transform.position - transform.position).normalized;
             seurausSuunta.y = 0;
         }
-        if (pitaakoSeurata && !ollaankoLyontiEtaisyydella)
+        if (states.isFollowing && !states.inHittingRange)
         {
             transform.LookAt(pelaaja.transform);
             rb.AddForce(seurausSuunta.normalized * kiihtyvyys);

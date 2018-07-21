@@ -8,21 +8,23 @@ public class NakeekoPelaajan : MonoBehaviour {
     public float nakoAlue; //Asteina +-
     public float nakoMatka;
     GameObject pelaaja;
+    EnStates states;
 
     void Start() {
         pelaaja = GameObject.FindGameObjectWithTag("Player");
         nakoAlue *= Mathf.Deg2Rad;
+        states = GetComponent<EnStates>();
     }
 
     void Update() {
         Vector3 suuntaPelaajaan = pelaaja.transform.position - transform.position;
         if (OnkoNakoKentassa() && suuntaPelaajaan.magnitude < nakoMatka && !OnkoJotainEdessa(suuntaPelaajaan))
         {
-            nahdaankoPelaaja = true;
+            states.seesPlayer = true;
         }
         else
         {
-            nahdaankoPelaaja = false;
+            states.seesPlayer = false;
         }
     }
 

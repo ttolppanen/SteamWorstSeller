@@ -8,22 +8,21 @@ public class PalaaTakaisin : MonoBehaviour {
 
     List<Vector4> viimeisetPisteet = new List<Vector4>();
     Vector3 startingPoint;
-    VihollisenSeuraus vhScripti;
     float aika;
     Rigidbody rb;
     float kiihtyvyys;
+    EnStates states;
 
 
     void Start () {
-        vhScripti = GetComponent<VihollisenSeuraus>();
+        states = GetComponent<EnStates>();
         rb = GetComponent<Rigidbody>();
         kiihtyvyys = GetComponent<vihollistenLiikuminen>().kiihtyvyys;
         startingPoint = transform.position;
 	}
 
-	void Update () {
-        bool pitaakoSeurata = vhScripti.pitaakoSeurata;
-        if (pitaakoSeurata)
+    void Update() {
+        if (states.isFollowing)
         {
             TallennaPisteet();
         }
@@ -31,6 +30,7 @@ public class PalaaTakaisin : MonoBehaviour {
         {
             PalaaTakaisinAlkuun();
         }
+        states.isReturning = viimeisetPisteet.Count == 0;
 	}
 
 
