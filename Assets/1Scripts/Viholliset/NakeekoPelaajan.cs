@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NakeekoPelaajan : MonoBehaviour {
 
-    public bool nahdaankoPelaaja;
     public float nakoAlue; //Asteina +-
     public float nakoMatka;
     GameObject pelaaja;

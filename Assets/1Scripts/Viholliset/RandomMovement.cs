@@ -17,11 +17,11 @@ public class RandomMovement : MonoBehaviour {
 
     void Start () {
         startingPoint = transform.position;
-        StartCoroutine(move());
         rb = GetComponent<Rigidbody>();
         maxSpeed = GetComponent<vihollistenLiikuminen>().maxNopeus;
         acceleration = GetComponent<vihollistenLiikuminen>().kiihtyvyys;
         states = GetComponent<EnStates>();
+        StartCoroutine(Move());
     }
 
     void FixedUpdate()
@@ -44,14 +44,15 @@ public class RandomMovement : MonoBehaviour {
         }
     }
 
-    IEnumerator move()
+    IEnumerator Move()
     {
         if (states.isIdle)
         {
             SetRandomPlace();
+            transform.rotation = Quaternion.LookRotation(randomDirection, Vector3.up);
         }
         yield return new WaitForSeconds(Random.Range(minTime, maxTime));
-        StartCoroutine(move());
+        StartCoroutine(Move());
     }
 
     void SetRandomPlace()
@@ -61,8 +62,6 @@ public class RandomMovement : MonoBehaviour {
         float randomZ = Mathf.Sqrt(Mathf.Pow(distance, 2) - Mathf.Pow(randomX, 2));
         randomZ *= Mathf.Pow(-1, Random.Range(0, 2)); // Randomilla onko z suunta positiivinen vai negatiivinen
         Vector3 possibleDirection = new Vector3(randomX, 0, randomZ);
-        print(randomX);
-        print(randomZ);
         Ray ray = new Ray(transform.position, possibleDirection);
         RaycastHit[] hits = Physics.RaycastAll(ray, distance);
         bool didWeHitSomething = false;

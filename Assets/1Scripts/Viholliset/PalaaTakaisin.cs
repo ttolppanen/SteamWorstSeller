@@ -30,7 +30,7 @@ public class PalaaTakaisin : MonoBehaviour {
         {
             PalaaTakaisinAlkuun();
         }
-        states.isReturning = viimeisetPisteet.Count == 0;
+        states.isReturning = viimeisetPisteet.Count != 0;
 	}
 
 

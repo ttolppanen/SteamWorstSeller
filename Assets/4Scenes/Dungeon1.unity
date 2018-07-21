@@ -1384,6 +1384,11 @@ Prefab:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114378447693210116, guid: c64d43f9f4162764e887b033dff9ef7e,
+        type: 2}
+      propertyPath: nopeusKerroin
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c64d43f9f4162764e887b033dff9ef7e, type: 2}
   m_IsPrefabParent: 0
@@ -1472,42 +1477,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114660243370215280, guid: c7e10d5d228d92147b6b8fa669c26dd2,
+    - target: {fileID: 114460437925990628, guid: c7e10d5d228d92147b6b8fa669c26dd2,
         type: 2}
-      propertyPath: maxHP
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 212496297015810764, guid: c7e10d5d228d92147b6b8fa669c26dd2,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3f8df16de62e11a409c2c2718d5147ae,
-        type: 3}
-    - target: {fileID: 1815655971659816, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699946501904848, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1860829623745010, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791337825459830, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114803337916008860, guid: c7e10d5d228d92147b6b8fa669c26dd2,
-        type: 2}
-      propertyPath: lyontiEtaisyys
+      propertyPath: nakoMatka
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65180845884749084, guid: c7e10d5d228d92147b6b8fa669c26dd2,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7e10d5d228d92147b6b8fa669c26dd2, type: 2}

@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 114803337916008860}
   - component: {fileID: 114982405696423930}
   - component: {fileID: 114768883809944054}
+  - component: {fileID: 114496431990571768}
   m_Layer: 9
   m_Name: Goblini
   m_TagString: Enemy
@@ -201,7 +202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seuraamisenLopetusAika: 5
-  pitaakoSeurata: 0
 --- !u!114 &114157357194205482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,9 +247,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5681224057cf77409c768bcd464a300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nahdaankoPelaaja: 0
   nakoAlue: 90
   nakoMatka: 40
+--- !u!114 &114496431990571768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860829623745010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b6ebb2ed0147b47b160dab3e9bc902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isIdle: 0
+  isFollowing: 0
+  seesPlayer: 0
+  inHittingRange: 0
+  isReturning: 0
 --- !u!114 &114574071338400950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,7 +309,6 @@ MonoBehaviour:
   maxDistance: 7
   minTime: 2
   maxTime: 4
-  randomPlace: {x: 0, y: 0, z: 0}
 --- !u!114 &114779788004070404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,7 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f968df9f7d1f95459573d09e4bd1b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ollaankoLyontiEtaisyydella: 0
   lyontiEtaisyys: 5
 --- !u!114 &114863039122008374
 MonoBehaviour:
