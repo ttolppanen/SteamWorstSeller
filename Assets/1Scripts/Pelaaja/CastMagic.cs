@@ -24,7 +24,7 @@ public class CastMagic : MonoBehaviour {
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit[] raycastHits = Physics.RaycastAll(ray, Mathf.Infinity);
-        raycastHits = NakeekoPelaajan.JarjestaPituudenMukaan(raycastHits);
+        raycastHits = Functions.SortByLenght(raycastHits);
         Vector3 hitPosition = transform.position + transform.forward;
         foreach (RaycastHit hit in raycastHits)
         {

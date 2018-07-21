@@ -30,7 +30,7 @@ public class NakeekoPelaajan : MonoBehaviour {
     {
         Ray sade = new Ray(transform.position, suunta);
         RaycastHit[] osumat = Physics.RaycastAll(sade, nakoMatka);
-        osumat = JarjestaPituudenMukaan(osumat);
+        osumat = Functions.SortByLenght(osumat);
         foreach (RaycastHit osuma in osumat)
         {
             if (osuma.transform != transform && osuma.transform.tag != "Enemy")
@@ -99,30 +99,5 @@ public class NakeekoPelaajan : MonoBehaviour {
             return NormaaliNakoKentta(kulma, rot);
         }
         return NormaaliNakoKentta(kulma, rot);*/
-    }
-
-    public static RaycastHit[] JarjestaPituudenMukaan(RaycastHit[] osumat)//JOS ON TÄMÄ LAGAA NIIN LOYTYY HELPPO RATKAISUööööööööö TAI EI MUTTA VOIS MIETTIÄ TARVIIKO OIKEASTI LISTAA SIITÄ VAI MITÄ???????
-    {
-        List<RaycastHit> jarjestettuLista = new List<RaycastHit>();
-        foreach (RaycastHit osuma in osumat)
-        {
-            float etaisyys = osuma.distance;
-            if (jarjestettuLista.Count == 0)
-            {
-                jarjestettuLista.Add(osuma);
-            }
-            else
-            {
-                for(int i = 0; i < jarjestettuLista.Count; i++)
-                {
-                    if (etaisyys < jarjestettuLista[i].distance)
-                    {
-                        jarjestettuLista.Insert(i, osuma);
-                        break;
-                    }
-                }
-            }
-        }
-        return jarjestettuLista.ToArray();
     }
 }
