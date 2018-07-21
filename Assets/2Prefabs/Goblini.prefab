@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 114460437925990628}
   - component: {fileID: 114803337916008860}
   - component: {fileID: 114982405696423930}
+  - component: {fileID: 114768883809944054}
   m_Layer: 9
   m_Name: Goblini
   m_TagString: Enemy
@@ -95,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860829623745010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.63259, y: 1.98, z: -1.02}
+  m_LocalPosition: {x: 58.63259, y: 1.98, z: 23.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4635436008060832}
@@ -168,7 +169,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 4}
+  m_Size: {x: 2, y: 2, z: 6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95971873562932844
 Animator:
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f529bde84afd41244a0e9daaaf36ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vahinko: 18
+  damage: 0
   parryykoPelaaja: 0
   pitaakoTarkistaaParry: 0
   stunTahdet: {fileID: 1044366088927456, guid: 347eec694f9884041bfb27d08b68f5ba, type: 2}
@@ -276,9 +277,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d4c513109ffd043b1acd3810b0fed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 52
+  maxHP: 80
   onkoKuollut: 0
   hp: 0
+--- !u!114 &114768883809944054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860829623745010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db55487822ca3247a18572bae8a6411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 7
+  minTime: 2
+  maxTime: 4
+  randomPlace: {x: 0, y: 0, z: 0}
 --- !u!114 &114779788004070404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ollaankoLyontiEtaisyydella: 0
-  lyontiEtaisyys: 4
+  lyontiEtaisyys: 5
 --- !u!114 &114863039122008374
 MonoBehaviour:
   m_ObjectHideFlags: 1

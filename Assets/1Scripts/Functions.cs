@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Functions : MonoBehaviour {
 
-    public static bool OnWhichSide(Vector3 hereToThere, Vector3 forward) //Millä puolella jokin objecti on, true on samalla puolella kuin forward vektori
+    public static bool OnWhichSide(Vector3 hereToThere, Vector3 forward) //Millä puolella jokin objecti on, true on samalla puolella kuin forward vektori. HUOM ETTÄ NOLLATAAN Y TÄÄLLÄ
     {
+        hereToThere.y = 0;
+        forward.y = 0;
         if (Vector3.Dot(hereToThere, forward) > 0)
         {
             return true;

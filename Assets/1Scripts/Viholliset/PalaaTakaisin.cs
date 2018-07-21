@@ -7,6 +7,7 @@ public class PalaaTakaisin : MonoBehaviour {
     public float tallennusAika;
 
     List<Vector4> viimeisetPisteet = new List<Vector4>();
+    Vector3 startingPoint;
     VihollisenSeuraus vhScripti;
     float aika;
     Rigidbody rb;
@@ -14,10 +15,10 @@ public class PalaaTakaisin : MonoBehaviour {
 
 
     void Start () {
-        viimeisetPisteet.Add(transform.position);
         vhScripti = GetComponent<VihollisenSeuraus>();
         rb = GetComponent<Rigidbody>();
         kiihtyvyys = GetComponent<vihollistenLiikuminen>().kiihtyvyys;
+        startingPoint = transform.position;
 	}
 
 	void Update () {
@@ -35,7 +36,11 @@ public class PalaaTakaisin : MonoBehaviour {
 
     void TallennaPisteet()
     {
-        if (Time.time - viimeisetPisteet[viimeisetPisteet.Count - 1].w > tallennusAika)
+        if (viimeisetPisteet.Count == 0)
+        {
+            viimeisetPisteet.Add(startingPoint);
+        }
+        else if (Time.time - viimeisetPisteet[viimeisetPisteet.Count - 1].w > tallennusAika)
         {
             Vector4 tallennettavaPiste = new Vector4(transform.position.x, 0, transform.position.z, Time.time);
             viimeisetPisteet.Add(tallennettavaPiste);
@@ -44,10 +49,15 @@ public class PalaaTakaisin : MonoBehaviour {
 
     void PalaaTakaisinAlkuun()
     {
+        if (viimeisetPisteet.Count == 0)
+        {
+            return;
+        }
+
         Vector3 viimeisinPiste = viimeisetPisteet[viimeisetPisteet.Count - 1];
         if (Mathf.Round(transform.position.x) == Mathf.Round(viimeisinPiste.x) && Mathf.Round(transform.position.z) == Mathf.Round(viimeisinPiste.z))
         {
-            if (viimeisetPisteet.Count > 1)
+            if (viimeisetPisteet.Count > 0)
             {
                 viimeisetPisteet.RemoveAt(viimeisetPisteet.Count - 1);
             }
